@@ -65,7 +65,7 @@ function MapSearchLeaflet() {
           center={position}
           zoom={13}
           scrollWheelZoom={true}
-          style={{ width:"600px",height: "300px" ,     margin: "0 auto"}}
+          style={{ width:"500px",height: "300px" , margin: "0 auto"}}
         
         >
           <TileLayer
@@ -75,7 +75,7 @@ function MapSearchLeaflet() {
           <LeafletgeoSearch />
           
         </MapContainer>
-       <GeoMyLocation />
+       {/* <GeoMyLocation /> */}
        <div style={{display:"none"}}>
        {/*<input type="text" id = "longitude" name = "longitude" style={{display:"none"}} />
        <input type="text" id = "latitude" name = "latitude" style={{display:"none"}} />*/}

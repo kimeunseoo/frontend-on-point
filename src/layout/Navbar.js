@@ -10,7 +10,7 @@ import {
   Menu,
   MenuItem,
   Button,
-  IconButton,
+  IconButton
 } from "@mui/material";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import MailIcon from "@mui/icons-material/Mail";
@@ -18,8 +18,16 @@ import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import SettingsIcon from "@mui/icons-material/Settings";
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import MarkChatUnreadIcon from "@mui/icons-material/MarkChatUnread";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import HomeIcon from '@mui/icons-material/Home';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -54,7 +62,56 @@ const UserBox = styled(Box)(({ theme }) => ({
 const Navbar = ({ navItem, SidebarProps }) => {
   const [open, setOpen] = useState(false);
   // const [navBarOpen, setNavBarOpen]=useState(false)
-  const [sidebarOpen, setSideBarOpen]= useState(false)
+  const [sidebarOpen, setSideBarOpen]= useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [switchPage, setSwitchPage] = useState("");
+
+  function toggleOf()
+  {
+    document.getElementById("subpopup").style.display = "none";
+    setToggleMenu(false);
+  }
+
+  function toggleOn()
+  {
+    document.getElementById("subpopup").style.display = "block";
+    setToggleMenu(true);
+  }
+
+  useEffect(
+    () => {
+      document.getElementById("subpopup").style.display = "none";
+      document.addEventListener('click', function(e)
+        {
+          e = e || window.event;
+          let target = e.target || e.srcElement;
+          let id = target.id;
+          if ( id != "subpopup" && id != "subpopitem1" && id != "subpopitem2" ) 
+          {
+              if ( ! target.src )
+                toggleOf();
+          }
+        }, false);
+    }, []
+  )
+
+    function next (key)
+    {
+      toggleOf();
+      // *** //
+      if (key === "/logout")
+      {
+        sessionStorage.setItem("logged", "")
+        sessionStorage.setItem("userid", "")
+      }
+      // *** //
+      window.location.pathname = key;
+      // *** //
+      setSwitchPage(key);
+      // *** //
+      if (key === "/logout") window.location.href = "http://localhost:3000/";
+    }
+
   return (
     <AppBar
       position="fixed"
@@ -69,15 +126,34 @@ const Navbar = ({ navItem, SidebarProps }) => {
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
 
       <Sidebar SidebarProps={sidebarOpen} />
-            <MenuIcon onClick={()=>{
-             setSideBarOpen(!sidebarOpen)
+            <MenuIcon id = "subpopitem1" onClick={()=>{
+              toggleOn();
+              setSideBarOpen(!sidebarOpen);
             }} />
-      
         </Typography>
         <Avatar
+          id = "subpopupitem2"
           src={sessionStorage.getItem("userlogo")}
           sx={{ width: 30, height: 30, display: { xs: "block", sm: "none" } }}
+          onClick={()=>{
+            toggleOn();
+            setSideBarOpen(!sidebarOpen);
+          }}
         />
+            { sessionStorage.getItem("logged") ?
+            <div id = "subpopup" class = "subpopup">
+              <MenuItem onClick={(e)=>next('/home')}> <HomeIcon /> &nbsp;&nbsp;&nbsp; Home</MenuItem>
+              <MenuItem onClick={(e)=>next('/mylist')}> <ListAltIcon /> &nbsp;&nbsp;&nbsp; My Eventlist</MenuItem>
+              <MenuItem onClick={(e)=>next('/message')}> <MarkChatUnreadIcon /> &nbsp;&nbsp;&nbsp; Message</MenuItem>
+              <MenuItem onClick={(e)=>next('/notifications')}> <NotificationsNoneIcon /> &nbsp;&nbsp;&nbsp; Notifications</MenuItem>
+              <MenuItem onClick={(e)=>next('/setting')}> <ManageAccountsIcon /> &nbsp;&nbsp;&nbsp; Settings</MenuItem>
+              <MenuItem onClick={(e)=>next('/logout')}> <LogoutIcon /> &nbsp;&nbsp;&nbsp; Logout</MenuItem>
+            </div>
+            :
+            <div id = "subpopup" class = "subpopup">
+              <MenuItem>Login</MenuItem>
+            </div>
+            }
         <IconsInNav>
           <Badge badgeContent={4} color="error">
             <MailIcon />

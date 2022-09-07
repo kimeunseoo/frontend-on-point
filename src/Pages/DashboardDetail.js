@@ -13,7 +13,8 @@ function DashboardDetail() {
         direction="row"
         sx={{ display: "flex", justifyContent: "space-between" }}
       >
-        <Sidebar />
+              { sessionStorage.getItem("logged") ? <Sidebar /> : "" }
+
 
         {/* 레어박스  */}
         <Box

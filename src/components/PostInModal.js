@@ -90,7 +90,7 @@ const handleAdd = () => {
         ])
       }
   
-      let formTarget = `http://localhost:3004/event/create/${uid}`;
+      let formTarget = `https://wbs-backend-finalproject.herokuapp.com/event/create/${uid}`;
 
       const CategorySearch = [
         { title: "General", year: 1957 },
@@ -114,7 +114,7 @@ const handleAdd = () => {
         { title: "Club", year: 0 },
         { title: "Private Event", year: 0 },
         { title: "Sport", year: 0 },
-        { title: "Music Theater", year: 0 },
+        { title: "Musical", year: 0 },
         { title: "Market Hall", year: 0 }
       ];
 
@@ -181,7 +181,7 @@ const handleAdd = () => {
               selectedId.value = "13";
             else if ( selected === "Sport" )
               selectedId.value = "14";
-            else if ( selected === "Music Theater" )
+            else if ( selected === "Musical" )
               selectedId.value = "15";
             else if ( selected === "Market Hall" )
               selectedId.value = "16";

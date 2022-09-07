@@ -30,7 +30,7 @@ const DashItem = () => {
     if (mylong === null || mylong === "null") mylong = 0;
     // *** //
     const query =
-      "http://localhost:3004/search/result/" +
+      "https://wbs-backend-finalproject.herokuapp.com/search/result/" +
       `${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`;
     // *** //
     const target = document.getElementById("contentmap");
@@ -41,7 +41,7 @@ const DashItem = () => {
         let entry = "";
         // *** //
         for (let element of json) {
-          entry = "http://localhost:3004" + element.foto1.replace("./", "/");
+          entry = "https://wbs-backend-finalproject.herokuapp.com" + element.foto1.replace("./", "/");
           // *** //
           cards.push({
             id: element.id,

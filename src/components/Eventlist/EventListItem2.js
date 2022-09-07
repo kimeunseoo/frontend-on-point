@@ -10,15 +10,15 @@ function EventListItem2( data ) {
               <div class = "eventitem-text">{data.data.addressinfo}</div>
               <div class = "eventitem-next">
                 <button class = "ok" onClick={(e) => {
-                    window.location.href = `http://localhost:3000/search/${data.data.id}`;
+                    window.location.href = `https://wbs-backend-finalproject.herokuapp.com/search/${data.data.id}`;
                 }}>Show</button>
                 &nbsp;&nbsp;&nbsp;
                 <button class = "cancel" onClick={(e) => {
                     if ( window.confirm("Do you want to cancel and remove the event?") )
                     {
                         const uid = sessionStorage.getItem("userid");
-//console.log(`http://localhost:3004/search/disjoin/${data.data.eid}/${uid}`);
-                        com(`http://localhost:3004/search/disjoin/${data.data.eid}/${uid}`,function(e){});
+//console.log(`https://wbs-backend-finalproject.herokuapp.com/search/disjoin/${data.data.eid}/${uid}`);
+                        com(`https://wbs-backend-finalproject.herokuapp.com/search/disjoin/${data.data.eid}/${uid}`,function(e){});
                         document.getElementById(`${data.data.id}`).style.display = "none";
                         //window.location.href = `http://localhost:3000/search/delete/${data.data.id}`;
                     }

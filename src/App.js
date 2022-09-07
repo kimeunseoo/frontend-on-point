@@ -9,7 +9,8 @@ import LayoutMain from "./layout/LayoutMain";
 // import { Header } from "./layout/Header";
 // import Footer from "./layout/Footer";
 // import SearchBar from "./components/SearchBar";
-import "./Message.css"
+import "./Message.css";
+import "./navbar.css";
 function App() {
   
   return (

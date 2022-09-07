@@ -10,8 +10,8 @@ function CommentInput( data ) {
             <div class = "under">
             <button onClick={(e) => {
                 const el = document.getElementById('comel');
-console.log(`http://localhost:3004/comment/set/${data.data.uid}/${data.data.eid}/${new Date().getTime()}/${el.value}`);
-                com(`http://localhost:3004/comment/set/${data.data.uid}/${data.data.eid}/${new Date().getTime()}/${el.value}`,
+console.log(`https://wbs-backend-finalproject.herokuapp.com/comment/set/${data.data.uid}/${data.data.eid}/${new Date().getTime()}/${el.value}`);
+                com(`https://wbs-backend-finalproject.herokuapp.com/comment/set/${data.data.uid}/${data.data.eid}/${new Date().getTime()}/${el.value}`,
                 function(e) {});
                 el.value = "";
                 window.setTimeout( () => {

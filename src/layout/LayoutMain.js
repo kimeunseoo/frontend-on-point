@@ -1,5 +1,5 @@
-import { Box} from "@mui/material";
-import { Stack  } from "@mui/system";
+import { Box } from "@mui/material";
+import { Stack } from "@mui/system";
 // import Mainbar from "./Mainbar";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
@@ -19,17 +19,16 @@ function LayoutMain() {
         direction="row"
         sx={{ display: "flex", justifyContent: "space-between" }}
       >
-        <Sidebar />
+        {sessionStorage.getItem("logged") ? <Sidebar /> : ""}
 
         {/* 레어박스  */}
         <Box
           sx={{
-            display: { xl: "block", xs:"none" },
+            display: { xl: "block", xs: "none" },
             width: "15%",
             height: "100vh",
           }}
-        >
-        </Box>
+        ></Box>
         {/* <Mainbar /> */}
         <Stack
           // bgcolor="pink"
@@ -44,15 +43,14 @@ function LayoutMain() {
           <Footer />
         </Stack>
         {/* 레어박스  */}
-        
+
         <Box
           sx={{
-            display: { xl: "block", xs:"none" },
+            display: { xl: "block", xs: "none" },
             width: "15%",
             height: "100vh",
           }}
-        >
-        </Box>
+        ></Box>
       </Stack>
     </Box>
   );

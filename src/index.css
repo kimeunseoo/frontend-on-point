@@ -118,9 +118,9 @@ code {
   margin-bottom: 4px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  border: 1px solid rgb(200,150,120);
+  border: 1px solid rgb(66, 66, 66);
   box-shadow: 4px 4px 4px rgba(0,0,0,0.06);
-  background-color: rgba(255,255,255,0.08);
+  background-color: rgb(255, 255, 255);
 }
 
 .comment-box .comment-date
@@ -128,6 +128,7 @@ code {
   text-align: right;
   font-size: 12px;
   font-style: italic;
+  color:#000;
 }
 
 .comment-box .comment-from
@@ -137,7 +138,8 @@ code {
   margin-top: 10px;
   padding-top: 10px;
   font-weight: bold;
-  border-top: 1px solid rgb(200,150,120);
+  border-top: 1px solid rgb(0, 0, 0);
+  color:#000;
 }
 
 .comment-box .comment-text
@@ -145,6 +147,7 @@ code {
   font-size: 14px;
   text-align: left;
   line-height: 22px;
+  color:#000;
 }
 
 .comment-edit .comment-input
@@ -153,7 +156,7 @@ code {
   padding: 10px;
   margin-top: 10px;
   border-radius: 10px;
-  border: 1px solid rgb(150,100,70);
+  border: 1px solid rgb(57, 57, 57);
   box-shadow: inset 4px 4px 4px rgba(0,0,0,0.16);
 }
 
@@ -170,7 +173,7 @@ code {
     cursor: pointer;
     border-radius: 10px;
     font-weight: bold;
-    background-color: rgb(254, 254, 254);
+    background-color: rgb(254, 254, 236);
     box-shadow: inset -2px -2px 2px rgba(0,0,0,0.05);
     border: 1px solid rgb(210,212,214);
 }
@@ -263,7 +266,7 @@ code {
     background-color: rgb(210,140,125);
     box-shadow: inset -2px -2px 2px rgba(0,0,0,0.09);
 }
-
+/* 
 .catbox
 {
   margin: 5px;
@@ -272,6 +275,8 @@ code {
   border: 6px solid rgb(200,200,216);
   box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
   overflow: hidden;
+  border: 0.5px solid black
+
 }
 .catbox .outer
 {
@@ -279,44 +284,35 @@ code {
   text-align: center;
   line-height: 192px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 10px;
   height: 192px;
   overflow: hidden;
+  border: 0.5px solid black
+
 }
 .catbox .outer:hover
 {
   transition-timing-function: ease-in;
-  border: 20px solid rgb(164,174,184);
+  border: 20px solid rgb(255, 255, 255);
   line-height: 100px;
-  transition: 0.25s;
-  font-size: 24px;
+  transition: 0.1s;
+  font-size: 20px;
   height: 160px;
 }
-.catbox .outer .inner
-{
-  height: 100%;
-  background-color: rgb(184,194,204);
-}
+
 .catbox .field
 {
   justify-content: center;
   display: inner-flex;
   margin: auto 0;
 }
-.catbox .topic
+.catbox .categoryTitie
 {
-  background-color: rgb(184,194,204);
+  color:#000;
   text-align: center;
   width: 100%;
-}
-.catbox .period
-{
-  background-color: rgb(184,194,204);
-  padding-bottom: 10px;
-  text-align: center;
-  padding-top: 0px;
-  width: 100%;
-}
+} */
+
 
 .order-items
 {
@@ -334,4 +330,18 @@ code {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 40px;
+}
+
+.categoryImg{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0.5;
+  transition: 2s;
+  z-index: 9000;
+
+}
+.categoryImg:hover {
+  opacity: 1.0;
+
 }

@@ -38,16 +38,18 @@ function EventCardBox( data ) {
             <div class = "buttons"><button onClick={(e) => { window.location.href=`http://localhost:3000/search/${data.data.id}`; }}>Details</button></div>
           </div> */}
 
-          <Card sx={{ maxWidth: 325, maxHeight: 310, m:1}}>
+          <Card sx={{ maxWidth: 325, m:1}}>
       <CardMedia
+      sx={{cursor:"pointer"}}
         component="img"
         alt="green iguana"
         height="140"
         // image="/static/images/cards/contemplative-reptile.jpg"
         //  image="{data.data.foto1}"
          image={data.data.foto1}
+         onClick={(e) => { window.location.href=`http://localhost:3000/search/${data.data.id}`; }}
       />
-      <CardContent>
+      <CardContent sx={{ overflow:"hidden", height:130}}>
         <Typography gutterBottom variant="h6"  sx={{fontSize:""}} >
         {data.data.location}
         </Typography>

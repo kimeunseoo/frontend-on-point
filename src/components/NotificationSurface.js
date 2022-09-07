@@ -37,7 +37,7 @@
     //       // *** //
     //       /*
     //       com(
-    //         `http://localhost:3004/${uid}`,
+    //         `https://wbs-backend-finalproject.herokuapp.com/${uid}`,
     //         function(json){
     //           fname.value = json[0].fname;
     //           sname.value = json[0].sname;
@@ -59,7 +59,7 @@
         {
             const uid = sessionStorage.getItem("userid");
             // *** //   
-            com( `http://localhost:3004/notification/list/${uid}`, function(json) {
+            com( `https://wbs-backend-finalproject.herokuapp.com/notification/list/${uid}`, function(json) {
                 let v = "";
                 // *** //
                 //alert(json);
@@ -106,7 +106,7 @@
                     document.getElementById(`tbl_btn_${element.id}`).addEventListener("click", function(e){
                         if ( window.confirm("Do you want to remove this Reminder?") )
                         {
-                            com( `http://localhost:3004/notification/remove/entry/${e.target.name}`, function(o) {} );
+                            com( `https://wbs-backend-finalproject.herokuapp.com/notification/remove/entry/${e.target.name}`, function(o) {} );
                             // *** //
                             //window.location.href = "http://localhost:3000/notifications";
                             loadTable();
@@ -301,7 +301,7 @@
                         if ( ok )
                         {
                             com(
-                            `http://localhost:3004/notification/save/${uid}/${ontype}/${ondaybox}/${onweekbox}/${onregionbox}/${ontitlebox}/${onmessagebox}`,
+                            `https://wbs-backend-finalproject.herokuapp.com/notification/save/${uid}/${ontype}/${ondaybox}/${onweekbox}/${onregionbox}/${ontitlebox}/${onmessagebox}`,
                             function(e){}
                             );
                             // *** //
@@ -392,7 +392,7 @@
                         const uid = sessionStorage.getItem("userid");
                         // *** //
                         com(
-                        `http://localhost:3004/notification/notify/set/${uid}/${onei}/${onms}/${onlo}`,
+                        `https://wbs-backend-finalproject.herokuapp.com/notification/notify/set/${uid}/${onei}/${onms}/${onlo}`,
                         function(e){}
                         );
                     }}
@@ -404,7 +404,7 @@
                         const uid = sessionStorage.getItem("userid");
                         // *** //
                         com(
-                        `http://localhost:3004/notification/notify/set/${uid}/1/1/1`,
+                        `https://wbs-backend-finalproject.herokuapp.com/notification/notify/set/${uid}/1/1/1`,
                         function(e){}
                         );
                     }}

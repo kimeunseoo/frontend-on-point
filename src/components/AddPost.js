@@ -30,7 +30,7 @@ const AddPost = () => {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: "60%",
-    height: "100%",
+    height: "85%",
     bgcolor: "background.paper",
     borderRadius: 5,
     p: 4,
@@ -51,7 +51,7 @@ const AddPost = () => {
           <AddIcon />
         </Fab>
       </Tooltip>
-      <Modal xs={{width:"100%"}}
+      <Modal sx={{width:"auto",height:"100%"}}
         open={postOpen}
         onClose={HandleClose}
         aria-labelledby="modal-modal-title"

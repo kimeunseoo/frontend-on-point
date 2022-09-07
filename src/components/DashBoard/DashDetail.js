@@ -38,11 +38,11 @@ const DashDetail = () => {
   useEffect(() => {
     const eid = getPathKey(1);
     // *** //
-    console.log(`http://localhost:3004/search/detail/${eid}`);
-    com(`http://localhost:3004/search/detail/${eid}`,
+    console.log(`https://wbs-backend-finalproject.herokuapp.com/search/detail/${eid}`);
+    com(`https://wbs-backend-finalproject.herokuapp.com/search/detail/${eid}`,
       function (json) {
         let pic = json[0].foto1;
-            pic = "http://localhost:3004" + pic.replace('./', '/');
+            pic = "https://wbs-backend-finalproject.herokuapp.com" + pic.replace('./', '/');
         // *** //
         setReadIn([json[0].id, json[0].uid, 
                   json[0].category, json[0].description, 
@@ -53,7 +53,7 @@ const DashDetail = () => {
         console.log(readIn);
       });
     // *** //
-    com(`http://localhost:3004/comment/get/${eid}`,
+    com(`https://wbs-backend-finalproject.herokuapp.com/comment/get/${eid}`,
       function (json) {
         console.log(json);
         setComment(json);
@@ -109,7 +109,7 @@ const DashDetail = () => {
         </Grid>
 
         <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-          <Box bgcolor="#000"  p={2} sx={{width:"500px",maxWidth:400, margin:"0 auto"}}>
+          <Box bgcolor="#fff"  p={2} sx={{width:"500px",maxWidth:400, margin:"0 auto"}}>
             {/* 코멘트 */}
             <CommentBox data={comment} />
           </Box>

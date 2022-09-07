@@ -51,13 +51,13 @@ function Category () {
             { title: "Club", cid : 12 },
             { title: "Private Event", cid : 13 },
             { title: "Sport", cid : 14 },
-            { title: "Music Theater", cid : 15 },
+            { title: "Musical", cid : 15 },
             { title: "Market Hall", cid : 16 }
           ];
         // *** //
         const cid = getPathKey(1);
         // *** //
-        const query = 'http://localhost:3004/search/category/' + cid;
+        const query = 'https://wbs-backend-finalproject.herokuapp.com/search/category/' + cid;
         // *** //
         const target = document.getElementById("contentmap");
         // *** //
@@ -73,7 +73,7 @@ function Category () {
             let cards = []; let entry = "";
             // *** //
             for (let element of json) {
-              entry = 'http://localhost:3004' + element.foto1.replace( './', '/');
+              entry = 'https://wbs-backend-finalproject.herokuapp.com' + element.foto1.replace( './', '/');
               // *** //
               cards.push({
                 id : element.id,
@@ -103,7 +103,8 @@ function Category () {
         direction="row"
         sx={{ display: "flex", justifyContent: "space-between" }}
       >
-        <Sidebar />
+    { sessionStorage.getItem("logged") ? <Sidebar /> : "" }
+
 
         {/* 레어박스  */}
         <Box

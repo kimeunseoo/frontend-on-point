@@ -34,13 +34,13 @@ function AvatarGroupItem( data ) {
 
   useEffect(
     () => {
-      com(`http://localhost:3004/event/origin/${getPathKey(1)}`, function(json) {
+      com(`https://wbs-backend-finalproject.herokuapp.com/event/origin/${getPathKey(1)}`, function(json) {
         let nam = json[0].fname + " " + json[0].sname;
         // *** //
         setUserData( { logo : json[0].logo, name : nam } );
       });
       // *** //
-      com(`http://localhost:3004/event/joinedFriends/${getPathKey(1)}`, function(json) {
+      com(`https://wbs-backend-finalproject.herokuapp.com/event/joinedFriends/${getPathKey(1)}`, function(json) {
         console.log(">>>>>");
         let arr = [];
         // *** //
@@ -62,14 +62,14 @@ function AvatarGroupItem( data ) {
   function joinEvent ( eid, uid, text, info )
   {
       const myuid = sessionStorage.getItem("userid");
-      com(`http://localhost:3004/search/join/${eid}/${myuid}/${text}/${info}`, function(e){});
+      com(`https://wbs-backend-finalproject.herokuapp.com/search/join/${eid}/${myuid}/${text}/${info}`, function(e){});
       alert("You have joined that event");
   }
 
   function disJoinEvent ( eid, uid )
   {
     const myuid = sessionStorage.getItem("userid");
-    com(`http://localhost:3004/search/disjoin/${eid}/${myuid}`, function(e){});
+    com(`https://wbs-backend-finalproject.herokuapp.com/search/disjoin/${eid}/${myuid}`, function(e){});
     alert("You have disjoined that event");
   }
 

@@ -27,7 +27,7 @@ function MapDashboard() {
     if (mylat === null || mylat === "null") mylat = 0;
     if (mylong === null || mylong === "null") mylong = 0;
     // *** //
-    const query = 'http://localhost:3004/map/specific/' +
+    const query = 'https://wbs-backend-finalproject.herokuapp.com/map/specific/' +
       `${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`;
     // *** //
     console.log(query);
@@ -41,13 +41,13 @@ function MapDashboard() {
     
     useEffect(()=>{
       /*
-      com('http://localhost:3004/map/data',(data)=>{
+      com('https://wbs-backend-finalproject.herokuapp.com/map/data',(data)=>{
         // return data;np
         console.log(data)
         setDataMaps(data)
       });*/
 
-      fetch('http://localhost:3004/map/data')
+      fetch('https://wbs-backend-finalproject.herokuapp.com/map/data')
       .then((res)=> res.json())
       .then((data)=>{
         // return data;

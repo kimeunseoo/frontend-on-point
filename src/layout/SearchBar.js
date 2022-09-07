@@ -84,7 +84,7 @@ export default function SearchBar() {
       selectedId = 13;
     else if ( selected === "Sport" )
       selectedId = 14;
-    else if ( selected === "Music Theater" )
+    else if ( selected === "Musical" )
       selectedId = 15;
     else if ( selected === "Market Hall" )
       selectedId = 16;
@@ -104,10 +104,10 @@ export default function SearchBar() {
     sessionStorage.setItem("search.category", category);
     sessionStorage.setItem("search.date", spdate);
     // *** //
-//    console.log(`http://localhost:3004/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`);
+//    console.log(`https://wbs-backend-finalproject.herokuapp.com/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`);
     window.location.href="http://localhost:3000/search";
 //alert( keyword + ", " + mylat + ", " + mylong + ", " + distance + ", " + category + ", " + spdate );
-    /*com( `http://localhost:3004/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`,
+    /*com( `https://wbs-backend-finalproject.herokuapp.com/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`,
          function (e) {
           alert(e);
          } );*/
@@ -137,7 +137,7 @@ export default function SearchBar() {
     { title: "Club", year: 0 },
     { title: "Private Event", year: 0 },
     { title: "Sport", year: 0 },
-    { title: "Music Theater", year: 0 },
+    { title: "Musical", year: 0 },
     { title: "Market Hall", year: 0 }
   ];
   const CategoryDistance = [

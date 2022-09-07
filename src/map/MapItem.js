@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "./maps.css";
 // import "leaflet/dist/leaflet.css";
+import com from "./../bridge/fetch.js";
 
 import L from "leaflet";
 import SearchLocation from "./SearchLocation";
@@ -44,6 +45,61 @@ const MapItem = () => {
     popupAnchor: [0, -25]
   });
 
+  const[dataSpecificMaps, setDataSpecificMaps]=useState(null);
+
+  function getPathKey(index) {
+    const query = window.location.pathname;
+    // *** //
+    let result = "";
+    let next = -1;
+    // *** //
+    for (let p = 0; p < query.length; p++) {
+      if (query[p] === '/') {
+        if (next === index)
+          break;
+        // *** //
+        next++;
+        // *** //
+        if (next === index)
+          result = "";
+      }
+      else
+        result += query[p];
+    }
+    // *** //
+    return result;
+  }
+
+  function receiveSpecificData ()
+  {
+    let keyword = sessionStorage.getItem("search.keyword");
+    let distance = sessionStorage.getItem("search.distance");
+    let category = sessionStorage.getItem("search.category");
+    let spdate = sessionStorage.getItem("search.date");
+    let mylat = sessionStorage.getItem("user.location.lat");
+    let mylong = sessionStorage.getItem("user.location.long");
+    // *** //
+    if (category === null || category === "null") category = 0;
+    if (spdate === null || spdate === "null") spdate = 0;
+    if (distance === null || mylat === "null") distance = 0;
+    if (mylat === null || mylat === "null") mylat = 0;
+    if (mylong === null || mylong === "null") mylong = 0;
+    // *** //
+    const query = `https://wbs-backend-finalproject.herokuapp.com/map/unique/${getPathKey(1)}`;
+    // *** //
+    console.log(query);
+    // *** //
+    console.log("---- TEST ----");
+    com(query, (json) => {
+      setDataSpecificMaps(json);
+      console.log(json);
+    });
+  }
+
+  useEffect(() => {
+    receiveSpecificData()
+  }, []);
+
   return (
     <div>
       <MapContainer center={position} zoom={14} style={{margin:"0 auto",width:"600px", height:"400px", maxWidth:400}}>
@@ -53,11 +109,11 @@ const MapItem = () => {
         />
 
         <Marker
-          position={position} icon={icon}
+          position={dataSpecificMaps ? dataSpecificMaps.position : position} icon={icon}
            eventHandlers={{ click: tooltipClick.bind(this, " test message ") }}
         >
           <Popup>
-           wir müssen noch machen dieser stelle,
+            {dataSpecificMaps ? dataSpecificMaps.title : ""}
           </Popup>
         </Marker>
       </MapContainer>

@@ -8,7 +8,7 @@ import axios from "axios";
 //   const [informationlist, setInformationList]=useState([]);
 
 //   const addInformation = () => {
-//     Axios.post("http://localhost:3004/login", {
+//     Axios.post("https://wbs-backend-finalproject.herokuapp.com/login", {
 //       name: name,
 //       age: age,
 //       city: city,
@@ -33,7 +33,7 @@ const Login = () => {
   const [password, setPassword] = useState(0);
 
   // const addInformation = () => {
-  //     Axios.post("http://localhost:3004/login", {
+  //     Axios.post("https://wbs-backend-finalproject.herokuapp.com/login", {
   //       name: name,
   //       age: age,
   //       city: city,
@@ -54,13 +54,13 @@ const Login = () => {
   //   }),
   // };
   // const LoginGet = () =>{
-  //   Axios.get('http://localhost:3004/login/mail/pass', function(json){
+  //   Axios.get('https://wbs-backend-finalproject.herokuapp.com/login/mail/pass', function(json){
   //     if(json.length > 0)
 
   //   })
   // }
   // const getFetchLogin = () => {
-  //    fetch('http://localhost:3004/login/mail/pass', function(json){
+  //    fetch('https://wbs-backend-finalproject.herokuapp.com/login/mail/pass', function(json){
   //     if(json.length > 0 ){
   //       console.log(json)
   //       sessionStorage.setItem("logged", 1)
@@ -75,8 +75,8 @@ const Login = () => {
     e.preventDefault();
     const email = document.getElementById("email");
     const password = document.getElementById("pass");
-    console.log(`http://localhost:3004/login/${email.value}/${password.value}`)
-    fetch(`http://localhost:3004/login/${email.value}/${password.value}`)
+    console.log(`https://wbs-backend-finalproject.herokuapp.com/login/${email.value}/${password.value}`)
+    fetch(`https://wbs-backend-finalproject.herokuapp.com/login/${email.value}/${password.value}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error: ${res.status}`);
@@ -99,7 +99,7 @@ const Login = () => {
         window.location.href = "http://localhost:3000/"
       });
 
-    // fetch('http://localhost:3004/login/mail/pass', function(json){
+    // fetch('https://wbs-backend-finalproject.herokuapp.com/login/mail/pass', function(json){
     //   if(json.length > 0 ){
     //     console.log(json)
     //     sessionStorage.setItem("logged", 1)

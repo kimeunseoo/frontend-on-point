@@ -34,10 +34,10 @@ const SignUp = () => {
     const city = document.getElementById("city").value;
     const postnumber = document.getElementById("postnumber").value;
     const phone = document.getElementById("phone").value;
-    com( `http://localhost:3004/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`, function(e){} );
+    com( `https://wbs-backend-finalproject.herokuapp.com/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`, function(e){} );
     window.location.href = "http://localhost:3000";
-  /*await axios.post(`http://localhost:3004/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`,{}
-    // http://localhost:3004/register/FIRSTNAME/LASTNAME/EMAIL/PHONE/CITY/PCODE/STATUSINFO
+  /*await axios.post(`https://wbs-backend-finalproject.herokuapp.com/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`,{}
+    // https://wbs-backend-finalproject.herokuapp.com/register/FIRSTNAME/LASTNAME/EMAIL/PHONE/CITY/PCODE/STATUSINFO
     ).then((json)=>{
          if (json.length > 0) {
           sessionStorage.setItem("Register", 1);

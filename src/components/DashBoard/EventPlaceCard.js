@@ -61,7 +61,7 @@ function EventPlaceCard( eid, promoter, title, ondate, picture, addressinfo, des
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
-        <Button onClick={(e)=>{ window.location.href=`http://localhost:3000/search/${eid}`; }}>Details</Button>
+        <Button onClick={(e)=>{ window.location.href=`https://wbs-backend-finalproject.herokuapp.com/search/${eid}`; }}>Details</Button>
         {/* <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}

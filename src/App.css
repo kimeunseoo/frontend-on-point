@@ -86,3 +86,16 @@ body{
   flex: 70%;
 }
 
+.footer {
+  width: 100%;
+  margin-top: 30px;
+  /* padding: 10px; */
+  justify-content: center;
+  text-align: center;
+  background-color: #000;
+}
+.footer .footer-text{
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}

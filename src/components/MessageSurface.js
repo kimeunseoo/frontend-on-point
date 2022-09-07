@@ -17,7 +17,7 @@ import {
             // *** //
             const fid = sessionStorage.getItem("friend");
             // *** //
-            com( `http://localhost:3004/message/send/${uid}/${fid}/${el.value}`, function(e){} );
+            com( `https://wbs-backend-finalproject.herokuapp.com/message/send/${uid}/${fid}/${el.value}`, function(e){} );
             // *** //
             const mio = document.getElementById("messageio");
             // *** //
@@ -32,7 +32,7 @@ import {
         const uid = sessionStorage.getItem("userid");
         // *** //
         com(
-          `http://localhost:3004/message/friendlist/${uid}`,
+          `https://wbs-backend-finalproject.herokuapp.com/message/friendlist/${uid}`,
           function(json)
           {
             const friendlist = document.getElementById("friendlist");
@@ -67,7 +67,7 @@ import {
                         }
                         // *** //
                         com(
-                            `http://localhost:3004/message/share/${e.uid}/${e.fid}`,
+                            `https://wbs-backend-finalproject.herokuapp.com/message/share/${e.uid}/${e.fid}`,
                             function(jout)
                             {
                                 const mio = document.getElementById("messageio");
@@ -98,7 +98,7 @@ import {
         );
         // *** //
         com(
-            `http://localhost:3004/message/reminderoptions/${uid}`,
+            `https://wbs-backend-finalproject.herokuapp.com/message/reminderoptions/${uid}`,
             function(json)
             {
               const rpopup = document.getElementById("reminderlist");
@@ -124,7 +124,7 @@ import {
                         // *** //
                         const fid = sessionStorage.getItem("friend");
                         // *** //
-                        com( `http://localhost:3004/message/notify/${uid}/${fid}/${e.id}`, function(e){} );
+                        com( `https://wbs-backend-finalproject.herokuapp.com/message/notify/${uid}/${fid}/${e.id}`, function(e){} );
                         // *** //
                         alert("Acknowledged! Your friend will be reminded when the reminder condition is met.")
                     }
@@ -150,7 +150,7 @@ import {
                     // *** //
                     if ( e.keyCode == 13 )
                     {
-                        com( `http://localhost:3004/message/connect/friend/${uid}/${fid.value}`, function(e){
+                        com( `https://wbs-backend-finalproject.herokuapp.com/message/connect/friend/${uid}/${fid.value}`, function(e){
                             fid.value = "";
                             loadFriendlist();
                         } );

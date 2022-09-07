@@ -78,8 +78,8 @@ const SidebarData = [
   },
 ];
 
-const Sidebar = ({props, SidebarProps}) => {
-  
+const Sidebar = ({props, sidebarOpen}) => {
+ 
   // const stylesClass = useStyles();
   const [isOpen, setIsOpen] = useState(true);
   const toggle = () => setIsOpen(!isOpen);
