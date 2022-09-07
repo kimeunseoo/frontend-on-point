@@ -1,0 +1,337 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.leaflet-container {
+  width: 100%;
+}
+
+.eventcardbox
+{
+  border: 1px solid rgb(210,210,210);
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.04);
+  margin-bottom: 10px;
+  max-width: 300px;
+  min-width: 260px;
+  margin: 10px;
+}
+
+.eventcardbox .address
+{
+  padding: 4px;
+  font-size: 12px;
+  text-align: left;
+  background-color: rgb(247,249,252);
+  margin: 8px auto;
+  margin-bottom: 0px;
+  box-shadow: inset 4px 4px 4px rgba(0,0,0,0.04);
+  border-top: 1px solid rgb(207,209,212);
+  border-bottom: 1px solid rgb(247,249,252);
+}
+
+.eventcardbox .informs
+{
+  padding: 4px;
+  font-size: 14px;
+  text-align: left;
+  background-color: rgb(242,252,248);
+  max-height: 120px;
+  overflow: auto;
+  line-height: 22px;  
+  box-shadow: inset 4px 4px 4px rgba(0,0,0,0.04);
+  border-top: 1px solid rgb(202,212,208);
+  border-bottom: 1px solid rgb(202,212,208);
+}
+
+.eventcardbox h3
+{
+  padding: 4px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.eventcardbox h4
+{
+  padding: 4px;
+  text-align: right;
+  font-style: italic;
+  font-size: 10px;
+}
+
+.eventcardbox .buttons
+{
+  padding: 4px;
+  text-align: right;
+}
+
+.eventcardbox .picture
+{
+  padding: 4px;
+  text-align: center;
+}
+
+.eventcardbox .picture img
+{
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.eventcardbox .buttons button
+{
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(230,235,240);
+    box-shadow: inset -2px -2px 2px rgba(0,0,0,0.05);
+    border: 1px solid rgb(210,212,214);
+}
+
+.eventcardbox .buttons button:hover
+{
+    background-color: rgb(234,238,244);
+    box-shadow: inset -2px -2px 2px rgba(0,0,0,0.09);
+}
+
+#contentmap
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.comment-box
+{
+  padding: 10px;
+  margin-bottom: 4px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid rgb(200,150,120);
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.06);
+  background-color: rgba(255,255,255,0.08);
+}
+
+.comment-box .comment-date
+{
+  text-align: right;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.comment-box .comment-from
+{
+  font-size: 12px;
+  text-align: left;
+  margin-top: 10px;
+  padding-top: 10px;
+  font-weight: bold;
+  border-top: 1px solid rgb(200,150,120);
+}
+
+.comment-box .comment-text
+{
+  font-size: 14px;
+  text-align: left;
+  line-height: 22px;
+}
+
+.comment-edit .comment-input
+{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(150,100,70);
+  box-shadow: inset 4px 4px 4px rgba(0,0,0,0.16);
+}
+
+.comment-edit .under
+{
+  margin-top: 10px;
+  text-align: right;
+}
+
+.comment-edit button
+{
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: rgb(254, 254, 254);
+    box-shadow: inset -2px -2px 2px rgba(0,0,0,0.05);
+    border: 1px solid rgb(210,212,214);
+}
+
+.comment-edit button:hover
+{
+    background-color: rgb(234,238,134);
+    box-shadow: inset -2px -2px 2px rgba(0,0,0,0.09);
+}
+
+
+
+
+.eventitem-box
+{
+  margin: 8px;
+  width: 240px;
+  max-height: 220px;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid rgb(190,180,175);
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.06);
+  background-color: rgba(225,225,225,0.28);
+}
+
+.eventitem-box .eventitem-date
+{
+  text-align: right;
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(190,180,175);
+}
+
+.eventitem-box .eventitem-from
+{
+  font-size: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.eventitem-box .eventitem-text
+{
+  font-size: 14px;
+  text-align: left;
+  line-height: 22px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgb(190,180,175);
+}
+
+.eventitem-box .eventitem-next
+{
+  text-align: right;
+}
+
+.eventitem-box .ok
+{
+    padding: 5px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: rgb(180,215,160);
+    box-shadow: inset -2px -2px 2px rgba(0,0,0,0.05);
+    border: 1px solid rgb(210,212,214);
+}
+
+.eventitem-box .ok:hover
+{
+    background-color: rgb(180,225,190);
+    box-shadow: inset -2px -2px 2px rgba(0,0,0,0.09);
+}
+
+.eventitem-box .cancel
+{
+    padding: 5px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(220,120,115);
+    box-shadow: inset -2px -2px 2px rgba(0,0,0,0.05);
+    border: 1px solid rgb(210,212,214);
+}
+
+.eventitem-box .cancel:hover
+{
+    background-color: rgb(210,140,125);
+    box-shadow: inset -2px -2px 2px rgba(0,0,0,0.09);
+}
+
+.catbox
+{
+  margin: 5px;
+  width: 200px;
+  height: 200px;
+  border: 6px solid rgb(200,200,216);
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.catbox .outer
+{
+  border: 4px solid rgb(184,194,204);
+  text-align: center;
+  line-height: 192px;
+  cursor: pointer;
+  font-size: 18px;
+  height: 192px;
+  overflow: hidden;
+}
+.catbox .outer:hover
+{
+  transition-timing-function: ease-in;
+  border: 20px solid rgb(164,174,184);
+  line-height: 100px;
+  transition: 0.25s;
+  font-size: 24px;
+  height: 160px;
+}
+.catbox .outer .inner
+{
+  height: 100%;
+  background-color: rgb(184,194,204);
+}
+.catbox .field
+{
+  justify-content: center;
+  display: inner-flex;
+  margin: auto 0;
+}
+.catbox .topic
+{
+  background-color: rgb(184,194,204);
+  text-align: center;
+  width: 100%;
+}
+.catbox .period
+{
+  background-color: rgb(184,194,204);
+  padding-bottom: 10px;
+  text-align: center;
+  padding-top: 0px;
+  width: 100%;
+}
+
+.order-items
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.order-topic
+{
+  font-size: 30px;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(210,210,210);
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}

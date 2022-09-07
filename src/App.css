@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+.App{
+  width: 100vw;
+  height: 100vh;
+}
+
+body{
+  margin: 0%;
+  padding: 0%;
+}
+.headerTitle{
+  width: 120px;
+  height:20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.sidebar{
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+}
+.top_section{
+  display: flex;
+  align-items:center;
+  padding:20px 15px;
+}
+.logo{
+  font-size: 50px;
+}
+.bars{
+  display: flex;
+  font-size: 25px;
+  margin-left: 80px;
+}
+
+/* .Sidebar{
+  height: 100vh;
+  width: 250px;
+  background-color:#262a31;
+} */
+
+.SidebarList{
+  height: auto;
+  width: 100%;
+  padding: 0px;
+}
+.sideUser{
+  text-align: center;
+  margin-bottom: 80px;
+}
+.SidebarList .row{
+  width: 100%;
+  height: 60px;
+  margin: 0%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  color:white;
+  justify-content: center;
+  align-items: center;
+  font-family:'Roboto', sans-serif;
+  font-size: small;
+}
+
+.SidebarList .row:hover {
+  cursor: pointer;
+  color: palevioletred;
+}
+.SidebarList #active{
+  color:palevioletred;
+}
+
+.row .sideIcon {
+  flex: 30%;
+  display: grid;
+  place-items: center; 
+}
+
+.row .sideTitle {
+  flex: 70%;
+}
+
