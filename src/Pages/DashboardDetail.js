@@ -24,7 +24,7 @@ function DashboardDetail() {
           }}
         ></Box>
         <Stack
-          bgcolor="pink"
+         
           flex={2}
           p={2}
           sx={{ display: "flex", flexWrap: "wrap", flexDirection: "column" }}

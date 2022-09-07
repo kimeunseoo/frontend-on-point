@@ -4,7 +4,7 @@ import com from "./../../bridge/fetch.js";
 import { useEffect, useState } from "react";
 import CategoryItem from "../CategoryItem.js";
 import EventCardBox from "../Eventlist/EventCardBox.js";
-
+import { Box } from "@mui/system";
 
 //import MapItem from "../../map/MapItem";
 import MapDashboard from "../../map/MapDashboard";
@@ -29,30 +29,32 @@ const DashItem = () => {
     if (mylat === null || mylat === "null") mylat = 0;
     if (mylong === null || mylong === "null") mylong = 0;
     // *** //
-    const query = 'http://localhost:3004/search/result/' +
+    const query =
+      "http://localhost:3004/search/result/" +
       `${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`;
     // *** //
     const target = document.getElementById("contentmap");
     // *** //
     com(query, (json) => {
       if (json) {
-        let cards = []; let entry = "";
+        let cards = [];
+        let entry = "";
         // *** //
         for (let element of json) {
-          entry = 'http://localhost:3004' + element.foto1.replace( './', '/');
+          entry = "http://localhost:3004" + element.foto1.replace("./", "/");
           // *** //
           cards.push({
-            id : element.id,
-            uid : element.id,
-            category : element.category,
-            longitude : element.longitude,
-            latitude : element.latitude,
-            promoter : element.promoter,
-            location : element.location,
-            ondate : element.ondate,
-            description : element.description,
-            addressinfo : element.addressinfo,
-            foto1 : entry
+            id: element.id,
+            uid: element.id,
+            category: element.category,
+            longitude: element.longitude,
+            latitude: element.latitude,
+            promoter: element.promoter,
+            location: element.location,
+            ondate: element.ondate,
+            description: element.description,
+            addressinfo: element.addressinfo,
+            foto1: entry,
           });
         }
         console.log(cards);
@@ -64,33 +66,47 @@ const DashItem = () => {
 
   return (
     <div>
-    <>
-    <Grid container rowSpacing={0.5} columns={12}>
-      <Grid item xs={12}>
-        <Typography sx={{ color: "#000", fontWeight: "bold", mb: "20px" }} p={2} >
-          Search List
-        </Typography >
-      </Grid>
-      <Grid xl={12} md={12} sm={12} xs={12} sx={{
-        width: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-      }}>
-        <Grid width={{ lg: "600px", xs: "85%" }} height={{ lg: "100%", xs: "300px" }}
-          sx={{ alignItems: "center", margin:"0 auto" }}
-        >
-          <MapDashboard />
+      <Grid container rowSpacing={0.5} columns={12}>
+        <Grid item xs={12}>
+          <Typography
+            sx={{ color: "#000", fontWeight: "bold", mb: "20px" }}
+            p={2}
+          >
+            Search List
+          </Typography>
         </Grid>
-      </Grid>
-      <Grid xl={12} md={12} xs={12}
-        sx={{
-          width: "100%",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        
-        <div style={{ maxHeight: "600px", overflow: "auto" }}>
+        <Grid
+          xl={12}
+          md={12}
+          sm={12}
+          xs={12}
+          sx={{
+            width: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Grid
+            width={{ lg: "600px", xs: "85%", maxwidth:400 }}
+            height={{ lg: "100%", xs: "300px" }}
+            sx={{ alignItems: "center", margin: "0 auto" , mb:"110px"}}
+          >
+            <MapDashboard />
+          </Grid>
+        </Grid>
+        <Grid
+          xl={6}
+          lg={6}
+          md={12}
+          xs={12}
+          sx={{
+            width: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {/*         
+        <div style={{ maxHeight: "600px" }}>
           <Grid item xl={12} m={1} sx={{
             width: "100%",
             display: "flex",
@@ -99,17 +115,16 @@ const DashItem = () => {
           }}>
             
           </Grid>
-        </div>
-       
+        </div> */}
+        </Grid>
       </Grid>
-    </Grid>
-    </>
-      <div id="contentmap" style={{ display: "flex", flexWrap : "wrap" }}></div>
-      {
-      cardIn.map( (item, index) => {
-        return <EventCardBox data={item} />
-      })
-    }
+     
+      <Box sx={{maxwidth:400,display:"flex",mt:"100px", justifyContent:"center", flexWrap:"wrap" ,margin:"0 auto"}}>
+        {cardIn.map((item, index) => {
+          return <EventCardBox data={item} />;
+        })}
+      </Box>
+    
     </div>
   );
 };

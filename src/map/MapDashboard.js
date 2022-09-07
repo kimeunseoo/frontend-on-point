@@ -93,7 +93,7 @@ function MapDashboard() {
 
 
   return (
-    <MapContainer center={[49.1951, 16.6068]} zoom={12} scrollWheelZoom >
+    <MapContainer center={[49.1951, 16.6068]} zoom={12} scrollWheelZoom  sx={{margin:"0 auto"}}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

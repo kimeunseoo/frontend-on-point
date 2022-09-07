@@ -65,7 +65,7 @@ function MapSearchLeaflet() {
           center={position}
           zoom={13}
           scrollWheelZoom={true}
-          style={{ width:"600px",height: "300px" }}
+          style={{ width:"600px",height: "300px" ,     margin: "0 auto"}}
         
         >
           <TileLayer

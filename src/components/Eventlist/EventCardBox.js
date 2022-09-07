@@ -38,7 +38,7 @@ function EventCardBox( data ) {
             <div class = "buttons"><button onClick={(e) => { window.location.href=`http://localhost:3000/search/${data.data.id}`; }}>Details</button></div>
           </div> */}
 
-          <Card sx={{ maxWidth: 325, maxHeight: 300, m:1}}>
+          <Card sx={{ maxWidth: 325, maxHeight: 310, m:1}}>
       <CardMedia
         component="img"
         alt="green iguana"
@@ -48,17 +48,17 @@ function EventCardBox( data ) {
          image={data.data.foto1}
       />
       <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
+        <Typography gutterBottom variant="h6"  sx={{fontSize:""}} >
         {data.data.location}
         </Typography>
-        <Typography variant="body2" color="text.secondary" fontSize="10px">
+        <Typography variant="body2" color="text.secondary" fontSize="8px">
         ${data.data.ondate}
         </Typography>
         <Typography variant="body2" color="text.secondary">
         ${data.data.addressinfo}
         </Typography>
       </CardContent>
-      <ExpandMore
+      {/* <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
           aria-expanded={expanded}
@@ -66,10 +66,9 @@ function EventCardBox( data ) {
           
         >
           <ExpandMoreIcon />
-        </ExpandMore>
+        </ExpandMore> */}
       <CardActions>
-        <Button onClick={(e) => { window.location.href=`http://localhost:3000/search/${data.data.id}`; }} size="small">Details</Button>
-       
+        <Button onClick={(e) => { window.location.href=`http://localhost:3000/search/${data.data.id}`; }} size="small">Details</Button>  
       </CardActions>
     </Card>
 

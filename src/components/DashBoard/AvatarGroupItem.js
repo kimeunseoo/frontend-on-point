@@ -74,7 +74,7 @@ function AvatarGroupItem( data ) {
   }
 
   return (
-    <Grid container spacing={1} xs={{maxWidth:" 500px",
+    <Grid container spacing={1} sx={{maxWidth:400,
       margin:" 0 auto"}}>
       <Grid item xs={12} >
         <Typography sx={{ color:"#000", fontWeight:"bold", fontSize:"10px"}}>
