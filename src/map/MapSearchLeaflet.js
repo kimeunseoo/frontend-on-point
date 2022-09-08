@@ -77,8 +77,8 @@ function MapSearchLeaflet() {
         </MapContainer>
        {/* <GeoMyLocation /> */}
        <div style={{display:"none"}}>
-       {/*<input type="text" id = "longitude" name = "longitude" style={{display:"none"}} />
-       <input type="text" id = "latitude" name = "latitude" style={{display:"none"}} />*/}
+       <input type="text" id = "longitude" name = "longitude" style={{display:"none"}} />
+       <input type="text" id = "latitude" name = "latitude" style={{display:"none"}} />
        <InputLabel id="demo-select-small">Pick up the event location from the map:</InputLabel>
        <TextField id = "pickedLocation" name = "location" sx={{ width: "100%" }} />
        </div>

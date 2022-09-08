@@ -119,7 +119,7 @@ const handleAdd = () => {
       ];
 
   return (
-    <Container sx={{ height: "auto", maxHeight:"600px", overflow: "auto"}}>
+    <div style={{height: "auto", maxHeight:"600px", overflow: "auto"}}>
       <form method = "post"
             action={formTarget}
             enctype = "multipart/form-data"
@@ -143,7 +143,7 @@ const handleAdd = () => {
           id="categorySelector2"
           options={CategorySearch}
           getOptionLabel={(option) => option.title}
-          sx={{ width: "100%", display: "flex"}}
+          sx={{ zIndex:90001, width: "100%", display: "flex"}}
           placeholder="Category"
           renderInput={(params) => <TextField {...params} label="Category" />}
           onChange={(e)=>{
@@ -255,7 +255,7 @@ const handleAdd = () => {
           </Box>
         </Stack>
       </form>
-    </Container>
+    </div>
     // <Container maxWidth="xs">
     //   <h4>Add Event</h4>
     //   <form>

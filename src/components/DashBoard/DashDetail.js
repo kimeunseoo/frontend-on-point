@@ -42,6 +42,8 @@ const DashDetail = () => {
     com(`https://wbs-backend-finalproject.herokuapp.com/search/detail/${eid}`,
       function (json) {
         let pic = json[0].foto1;
+
+        if(pic != undefined && pic != null)
             pic = "https://wbs-backend-finalproject.herokuapp.com" + pic.replace('./', '/');
         // *** //
         setReadIn([json[0].id, json[0].uid, 

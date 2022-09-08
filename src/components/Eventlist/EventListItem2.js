@@ -13,6 +13,7 @@ function EventListItem2( data ) {
               <div class = "eventitem-text">{data.data.addressinfo}</div>
               <div class = "eventitem-navi">
                 <button class = "ok" onClick={(e) => {
+                    //  window.location.pathname=`/search/${data.data.id}`
                     navigate( `/search/${data.data.id}`)
                 }}>Show</button>
                 &nbsp;&nbsp;&nbsp;

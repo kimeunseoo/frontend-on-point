@@ -13,7 +13,8 @@ function EventListItem( data ) {
               <div class = "eventitem-text">{data.data.addressinfo}</div>
               <div class = "eventitem-navi">
                 <button class = "ok" onClick={(e) => {
-                    navigate( `/search/${data.data.id}`)
+                //    window.location.pathname=`/search/${data.data.id}`
+                   navigate( `/search/${data.data.id}`)
                 }}>Show</button>
                 &nbsp;&nbsp;&nbsp;
                 <button class = "cancel" onClick={(e) => {

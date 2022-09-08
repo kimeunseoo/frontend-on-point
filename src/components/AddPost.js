@@ -51,7 +51,7 @@ const AddPost = () => {
           <AddIcon />
         </Fab>
       </Tooltip>
-      <Modal sx={{width:"auto",height:"100%"}}
+      <Modal sx={{width:"auto",height:"100%", zIndex:1200, position:"fixed", top:"40px", margin:"0 auto"}}
         open={postOpen}
         onClose={HandleClose}
         aria-labelledby="modal-modal-title"
