@@ -20,6 +20,7 @@ function CategoryItem(data) {
     <Box
       sx={{
         padding: 1,
+        
         backgroundColor: "#efe8d6",
         "&:hover": {
           backgroundColor: "#000",
@@ -39,6 +40,7 @@ function CategoryItem(data) {
           //   }}
           sx={{
             color: "#efe8d6",
+           
             "&:hover": {
               color: "#fff",
               // cursor: "pointer",
