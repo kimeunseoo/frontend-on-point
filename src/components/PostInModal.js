@@ -43,7 +43,7 @@ function PostInModal(props) {
     maxNumber: "",
   });
 
-  const url = "http://localhost:3000/create";
+  const url = "https://on-point-project.netlify.app/create";
 
 /*  const requestOptions = {
     method : "POST",

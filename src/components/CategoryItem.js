@@ -25,7 +25,7 @@ function CategoryItem(data) {
         },
       }}
       onClick={(e) => {
-        window.location.href = `http://localhost:3000/category/${data.data.cid}`;
+        window.location.href = `https://on-point-project.netlify.app/category/${data.data.cid}`;
       }}
     >
      

@@ -15,7 +15,7 @@ console.log(`https://wbs-backend-finalproject.herokuapp.com/comment/set/${data.d
                 function(e) {});
                 el.value = "";
                 window.setTimeout( () => {
-                  window.location.href = `http://localhost:3000/search/${data.data.eid}`;
+                  window.location.href = `https://on-point-project.netlify.app/search/${data.data.eid}`;
                 }, 100 );
             }}>Post</button>
             </div>

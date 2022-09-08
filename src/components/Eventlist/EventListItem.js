@@ -10,7 +10,7 @@ function EventListItem( data ) {
               <div class = "eventitem-text">{data.data.addressinfo}</div>
               <div class = "eventitem-navi">
                 <button class = "ok" onClick={(e) => {
-                    window.location.href = `http://localhost:3000/search/${data.data.id}`;
+                    window.location.href = `https://on-point-project.netlify.app/search/${data.data.id}`;
                 }}>Show</button>
                 &nbsp;&nbsp;&nbsp;
                 <button class = "cancel" onClick={(e) => {
@@ -19,7 +19,7 @@ function EventListItem( data ) {
                         console.log(`https://wbs-backend-finalproject.herokuapp.com/search/delete/${data.data.id}`);
                         com(`https://wbs-backend-finalproject.herokuapp.com/search/delete/${data.data.id}`,function(e){});
                         document.getElementById(`${data.data.id}`).style.display = "none";
-                        //window.location.href = `http://localhost:3000/search/delete/${data.data.id}`;
+                        //window.location.href = `https://on-point-project.netlify.app/search/delete/${data.data.id}`;
                     }
                 }}>Remove</button>
             </div>

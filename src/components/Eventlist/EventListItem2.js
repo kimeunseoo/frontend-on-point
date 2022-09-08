@@ -20,7 +20,7 @@ function EventListItem2( data ) {
 //console.log(`https://wbs-backend-finalproject.herokuapp.com/search/disjoin/${data.data.eid}/${uid}`);
                         com(`https://wbs-backend-finalproject.herokuapp.com/search/disjoin/${data.data.eid}/${uid}`,function(e){});
                         document.getElementById(`${data.data.id}`).style.display = "none";
-                        //window.location.href = `http://localhost:3000/search/delete/${data.data.id}`;
+                        //window.location.href = `https://on-point-project.netlify.app/search/delete/${data.data.id}`;
                     }
                 }}>Remove</button>
             </div>

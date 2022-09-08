@@ -178,7 +178,7 @@ const Sidebar = ({props, sidebarOpen}) => {
                 if (item.id === 10) {
                   sessionStorage.setItem("logged", "")
                   sessionStorage.setItem("userid", "")
-                  window.location.href = "http://localhost:3000/"
+                  window.location.href = "https://on-point-project.netlify.app/"
                 } else 
                 window.location.pathname = item.link;
               }}

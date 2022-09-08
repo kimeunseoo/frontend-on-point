@@ -105,7 +105,7 @@ export default function SearchBar() {
     sessionStorage.setItem("search.date", spdate);
     // *** //
 //    console.log(`https://wbs-backend-finalproject.herokuapp.com/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`);
-    window.location.href="http://localhost:3000/search";
+    window.location.href="https://on-point-project.netlify.app/search";
 //alert( keyword + ", " + mylat + ", " + mylong + ", " + distance + ", " + category + ", " + spdate );
     /*com( `https://wbs-backend-finalproject.herokuapp.com/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`,
          function (e) {

@@ -96,7 +96,7 @@ const Login = () => {
           sessionStorage.setItem("username","" );
           sessionStorage.setItem("userlogo", "" );
         }
-        window.location.href = "http://localhost:3000/"
+        window.location.href = "https://on-point-project.netlify.app/"
       });
 
     // fetch('https://wbs-backend-finalproject.herokuapp.com/login/mail/pass', function(json){

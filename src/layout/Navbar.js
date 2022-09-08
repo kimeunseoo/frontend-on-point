@@ -109,7 +109,7 @@ const Navbar = ({ navItem, SidebarProps }) => {
       // *** //
       setSwitchPage(key);
       // *** //
-      if (key === "/logout") window.location.href = "http://localhost:3000/";
+      if (key === "/logout") window.location.href = "https://on-point-project.netlify.app/";
     }
 
   return (

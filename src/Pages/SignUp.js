@@ -35,7 +35,7 @@ const SignUp = () => {
     const postnumber = document.getElementById("postnumber").value;
     const phone = document.getElementById("phone").value;
     com( `https://wbs-backend-finalproject.herokuapp.com/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`, function(e){} );
-    window.location.href = "http://localhost:3000";
+    window.location.href = "https://on-point-project.netlify.app";
   /*await axios.post(`https://wbs-backend-finalproject.herokuapp.com/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`,{}
     // https://wbs-backend-finalproject.herokuapp.com/register/FIRSTNAME/LASTNAME/EMAIL/PHONE/CITY/PCODE/STATUSINFO
     ).then((json)=>{

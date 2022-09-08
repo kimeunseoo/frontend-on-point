@@ -108,7 +108,7 @@
                         {
                             com( `https://wbs-backend-finalproject.herokuapp.com/notification/remove/entry/${e.target.name}`, function(o) {} );
                             // *** //
-                            //window.location.href = "http://localhost:3000/notifications";
+                            //window.location.href = "https://on-point-project.netlify.app/notifications";
                             loadTable();
                         }
                     });
@@ -316,7 +316,7 @@
                             // *** //
                             alert("Your reminder has been created successfully");
                             // *** //
-                            //window.location.href = "http://localhost:3000/notifications";
+                            //window.location.href = "https://on-point-project.netlify.app/notifications";
                             loadTable();
                         }
                     }}
