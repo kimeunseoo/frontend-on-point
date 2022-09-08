@@ -108,7 +108,7 @@ const Navbar = ({ navItem, SidebarProps }) => {
         sessionStorage.setItem("userid", "")
       }
       // *** //
-      window.location.pathname = key;
+      navigate(key)
       // *** //
       setSwitchPage(key);
       // *** //

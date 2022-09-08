@@ -55,10 +55,10 @@ function EventCardBox( data ) {
         {data.data.location}
         </Typography>
         <Typography variant="body2" color="text.secondary" fontSize="8px">
-        ${data.data.ondate}
+        {data.data.ondate}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-        ${data.data.addressinfo}
+        {data.data.addressinfo}
         </Typography>
       </CardContent>
       {/* <ExpandMore

@@ -182,7 +182,7 @@ const Sidebar = ({props, sidebarOpen}) => {
                   sessionStorage.setItem("userid", "")
                   navigate("/")
                 } else 
-                window.location.pathname = item.link;
+                navigate(item.link) 
               }}
             >
               <ListItemIcon

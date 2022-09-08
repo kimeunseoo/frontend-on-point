@@ -104,7 +104,7 @@ const SettingItem = () => {
   return (
     <>
       <Box>
-        <Typography variant="h4">SETTING</Typography>
+        <Typography variant="h4">SETTINGS</Typography>
       </Box>
       <Grid container columns={12}>
         <Grid item xs={12} sx={{ m: "0 auto", mt: 3 }}>
@@ -121,7 +121,7 @@ const SettingItem = () => {
           >
             <Card sx={{ width: 420 }}>
               <Typography sx={{ fontSize: "10px", fontWeight: "bold", p: 2 }}>
-                Profile Setting
+                Profile Settings
               </Typography>
               <Grid item sx={{ p: "1.5rem 0rem", textAlign: "center" }}>
                 {/* PROFILE PHOTO */}
@@ -175,7 +175,7 @@ const SettingItem = () => {
                   {sessionStorage.getItem("username")}
                 </Typography>
               </Grid>
-              <Typography>&nbsp;&nbsp;&nbsp;&nbsp;Pick up Avatar:</Typography>
+              <Typography>&nbsp;&nbsp;&nbsp;&nbsp; Choose your Avatar: </Typography>
               <CardContent sx={{ display: "flex", flexWrap: "wrap" }}>
                 {/* <Avatar id = "avatar-icon-0" src = "https://wbs-backend-finalproject.herokuapp.com/public/boy.png"></Avatar>
                   <Avatar id = "avatar-icon-1" src = "https://wbs-backend-finalproject.herokuapp.com/public/boy(1).png"></Avatar>
@@ -299,7 +299,7 @@ const SettingItem = () => {
                 <br />
                 <TextField
                   id="email"
-                  label="Email (Optional)"
+                  label="Email"
                   value={inputEMail}
                   onChange={(event) => setInputEMail(event.target.value)}
                   variant="standard"
@@ -324,7 +324,7 @@ const SettingItem = () => {
                 />
                 <TextField
                   id="pcode"
-                  label="PostNumber"
+                  label="Postcode"
                   variant="standard"
                   value={inputPCode}
                   onChange={(event) => setInputPCode(event.target.value)}
