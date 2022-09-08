@@ -3,6 +3,8 @@ import { Input, Button, TextField , Grid, Link, Typography } from "@mui/material
 import { React, useState } from "react";
 import { Box, Stack} from "@mui/system";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+
 // import Axios from "axios";
 
 //   const [informationlist, setInformationList]=useState([]);
@@ -29,6 +31,7 @@ import axios from "axios";
 //   }
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState(0);
 
@@ -72,6 +75,8 @@ const Login = () => {
   // };
 
   const loginSubmit = (e) => {
+    
+
     e.preventDefault();
     const email = document.getElementById("email");
     const password = document.getElementById("pass");
@@ -96,9 +101,8 @@ const Login = () => {
           sessionStorage.setItem("username","" );
           sessionStorage.setItem("userlogo", "" );
         }
-        // window.location.href = "https://on-point-project.netlify.app/"
-        // window.location.href = window.location.hostname
-        window.location.reload()
+        navigate("/")
+      
 
       });
 
@@ -116,6 +120,7 @@ const Login = () => {
     //   sessionStorage.setItem("passwordData", "12345");
     // }
   };
+  const navigate = useNavigate();
 
   return (
     <div className="container">
@@ -153,7 +158,7 @@ const Login = () => {
               <Grid container>
              
               <Grid item xs={12}>
-                <Link href="/signup" style={{ cursor: "pointer" }} >
+                <Link onClick={() => navigate('/signup')} style={{ cursor: "pointer" }} >
              <Typography sx={{textAlign:"center"}}>  Don't have an account? Sign Up!</Typography>
                 </Link>
               </Grid>

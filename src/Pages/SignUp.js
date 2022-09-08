@@ -4,9 +4,12 @@ import { React, useState } from "react";
 import { Box, Stack } from "@mui/system";
 import com from "./../bridge/fetch.js";
 // import { axios } from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const axios = require('axios');
 const SignUp = () => {
+  const navigate = useNavigate();
+
   const [signUpFName, setSignUpFName] = useState("");
   const [signUpLName, setSignUpLName] = useState("");
   const [signUpEmail, setSignUpEmail] = useState("");
@@ -35,7 +38,7 @@ const SignUp = () => {
     const postnumber = document.getElementById("postnumber").value;
     const phone = document.getElementById("phone").value;
     com( `https://wbs-backend-finalproject.herokuapp.com/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`, function(e){} );
-    window.location.href = "https://on-point-project.netlify.app";
+   navigate("/")
   /*await axios.post(`https://wbs-backend-finalproject.herokuapp.com/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`,{}
     // https://wbs-backend-finalproject.herokuapp.com/register/FIRSTNAME/LASTNAME/EMAIL/PHONE/CITY/PCODE/STATUSINFO
     ).then((json)=>{

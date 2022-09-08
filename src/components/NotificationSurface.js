@@ -14,12 +14,14 @@
   import Switch from "@mui/material/Switch";
   import FormGroup from "@mui/material/FormGroup";
   import FormControlLabel from "@mui/material/FormControlLabel";
-
+  import { useNavigate } from 'react-router-dom';
   import { useLayoutEffect, useEffect, useState } from "react";
 
   import com from "./../bridge/fetch.js";
   
   const NotificationSurface = () => {
+    const navigate = useNavigate();
+
     const [value, setValue] = useState(0);
     
       const handleChange = (newValue) => {
@@ -108,7 +110,7 @@
                         {
                             com( `https://wbs-backend-finalproject.herokuapp.com/notification/remove/entry/${e.target.name}`, function(o) {} );
                             // *** //
-                            //window.location.href = "https://on-point-project.netlify.app/notifications";
+                         
                             loadTable();
                         }
                     });
@@ -316,7 +318,7 @@
                             // *** //
                             alert("Your reminder has been created successfully");
                             // *** //
-                            //window.location.href = "https://on-point-project.netlify.app/notifications";
+                           
                             loadTable();
                         }
                     }}

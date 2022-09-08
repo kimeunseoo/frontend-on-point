@@ -28,6 +28,7 @@ import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import HomeIcon from '@mui/icons-material/Home';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { useNavigate } from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -60,6 +61,8 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 // UserBox 를 사용하면, 핸드폰 사이즈로 바뀔 때 아이콘이 이름으로 바뀐다거나 조정가능..
 const Navbar = ({ navItem, SidebarProps }) => {
+  const navigate = useNavigate();
+
   const [open, setOpen] = useState(false);
   // const [navBarOpen, setNavBarOpen]=useState(false)
   const [sidebarOpen, setSideBarOpen]= useState(false);
@@ -109,7 +112,7 @@ const Navbar = ({ navItem, SidebarProps }) => {
       // *** //
       setSwitchPage(key);
       // *** //
-      if (key === "/logout") window.location.href = "https://on-point-project.netlify.app/";
+      if (key === "/logout") navigate("/") ;
     }
 
   return (

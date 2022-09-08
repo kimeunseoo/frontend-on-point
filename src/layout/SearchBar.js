@@ -5,8 +5,11 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider}  from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker }from '@mui/x-date-pickers/DatePicker';
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
+import { useNavigate } from 'react-router-dom';
 
 export default function SearchBar() {
+  const navigate = useNavigate();
+
   const [search, setSearch] = useState("");
   const [date, setDate] = useState(null);
 
@@ -105,7 +108,7 @@ export default function SearchBar() {
     sessionStorage.setItem("search.date", spdate);
     // *** //
 //    console.log(`https://wbs-backend-finalproject.herokuapp.com/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`);
-    window.location.href="https://on-point-project.netlify.app/search";
+    navigate("/search")
 //alert( keyword + ", " + mylat + ", " + mylong + ", " + distance + ", " + category + ", " + spdate );
     /*com( `https://wbs-backend-finalproject.herokuapp.com/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`,
          function (e) {

@@ -1,8 +1,9 @@
 import React from "react";
 import com from "../../bridge/fetch";
+import { useNavigate } from 'react-router-dom';
 
 function CommentInput( data ) {
-
+  const navigate = useNavigate();
   return (
     <div>
         <div class = "comment-edit">
@@ -15,7 +16,7 @@ console.log(`https://wbs-backend-finalproject.herokuapp.com/comment/set/${data.d
                 function(e) {});
                 el.value = "";
                 window.setTimeout( () => {
-                  window.location.href = `https://on-point-project.netlify.app/search/${data.data.eid}`;
+                 navigate(`/search/${data.data.eid}`);
                 }, 100 );
             }}>Post</button>
             </div>
@@ -23,5 +24,7 @@ console.log(`https://wbs-backend-finalproject.herokuapp.com/comment/set/${data.d
     </div>
   );
 }
+
+
 
 export default CommentInput;

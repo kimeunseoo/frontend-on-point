@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import com from "../../bridge/fetch";
+import { useNavigate } from 'react-router-dom';
 
 function EventListItem( data ) {
+    const navigate = useNavigate();
+
     return (
       <div>
           <div class = "eventitem-box" id={data.data.id}>
@@ -10,7 +13,7 @@ function EventListItem( data ) {
               <div class = "eventitem-text">{data.data.addressinfo}</div>
               <div class = "eventitem-navi">
                 <button class = "ok" onClick={(e) => {
-                    window.location.href = `https://on-point-project.netlify.app/search/${data.data.id}`;
+                    navigate( `/search/${data.data.id}`)
                 }}>Show</button>
                 &nbsp;&nbsp;&nbsp;
                 <button class = "cancel" onClick={(e) => {
@@ -19,7 +22,7 @@ function EventListItem( data ) {
                         console.log(`https://wbs-backend-finalproject.herokuapp.com/search/delete/${data.data.id}`);
                         com(`https://wbs-backend-finalproject.herokuapp.com/search/delete/${data.data.id}`,function(e){});
                         document.getElementById(`${data.data.id}`).style.display = "none";
-                        //window.location.href = `https://on-point-project.netlify.app/search/delete/${data.data.id}`;
+                      
                     }
                 }}>Remove</button>
             </div>

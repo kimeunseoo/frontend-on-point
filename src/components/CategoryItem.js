@@ -2,9 +2,11 @@ import { Box, Typography } from "@mui/material";
 import { Image } from "@mui/icons-material";
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
+import { useNavigate } from "react-router-dom";
 
 function CategoryItem(data) {
+  const navigate = useNavigate();
+
   const theme = createTheme();
 
   function getRandomRgb() {
@@ -25,10 +27,9 @@ function CategoryItem(data) {
         },
       }}
       onClick={(e) => {
-        window.location.href = `https://on-point-project.netlify.app/category/${data.data.cid}`;
+        navigate(`/category/${data.data.cid}`);
       }}
     >
-     
       <Box>
         <Typography
           //   onMouseOver={(e)=>{
@@ -44,14 +45,14 @@ function CategoryItem(data) {
             },
           }}
         >
-         
           {data.data.title}
         </Typography>
-        
-        <img style={{width:"50px", height:"50px", marginLeft:"15px"}} src={data.data.icon} />
-        <div class="categoryImg" >
 
-        </div>
+        <img
+          style={{ width: "50px", height: "50px", marginLeft: "15px" }}
+          src={data.data.icon}
+        />
+        <div class="categoryImg"></div>
       </Box>
     </Box>
   );

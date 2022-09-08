@@ -16,9 +16,10 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Button } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
 function EventPlaceCard( eid, promoter, title, ondate, picture, addressinfo, description ) {
-
+  const navigate = useNavigate();
   return (
     <Card sx={{ maxWidth: 320, maxHeight: 180, m: 1 }}>
       <CardHeader
@@ -61,7 +62,7 @@ function EventPlaceCard( eid, promoter, title, ondate, picture, addressinfo, des
         <IconButton aria-label="share">
           <ShareIcon />
         </IconButton>
-        <Button onClick={(e)=>{ window.location.href=`https://wbs-backend-finalproject.herokuapp.com/search/${eid}`; }}>Details</Button>
+        <Button onClick={(e)=>{ navigate(`/search/${eid}`) }}>Details</Button>
         {/* <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}

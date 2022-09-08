@@ -9,10 +9,12 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import IconButton from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 
 function EventCardBox( data ) {
   const [expanded, setExpanded] = useState(false);
+  const navigate = useNavigate();
 
   const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -35,7 +37,6 @@ function EventCardBox( data ) {
             <h4>${data.data.ondate}</h4>
             <div class = "address">${data.data.addressinfo}</div>
             <div class = "informs">${data.data.description}</div>
-            <div class = "buttons"><button onClick={(e) => { window.location.href=`https://on-point-project.netlify.app/search/${data.data.id}`; }}>Details</button></div>
           </div> */}
 
           <Card sx={{ maxWidth: 325, m:1}}>
@@ -47,7 +48,7 @@ function EventCardBox( data ) {
         // image="/static/images/cards/contemplative-reptile.jpg"
         //  image="{data.data.foto1}"
          image={data.data.foto1}
-         onClick={(e) => { window.location.href=`https://on-point-project.netlify.app/search/${data.data.id}`; }}
+         onClick={(e) => { navigate(`/search/${data.data.id}`) }}
       />
       <CardContent sx={{ overflow:"hidden", height:130}}>
         <Typography gutterBottom variant="h6"  sx={{fontSize:""}} >
@@ -70,7 +71,7 @@ function EventCardBox( data ) {
           <ExpandMoreIcon />
         </ExpandMore> */}
       <CardActions>
-        <Button onClick={(e) => { window.location.href=`https://on-point-project.netlify.app/search/${data.data.id}`; }} size="small">Details</Button>  
+        <Button onClick={(e) => {  navigate(`/search/${data.data.id}`) }} size="small">Details</Button>  
       </CardActions>
     </Card>
 

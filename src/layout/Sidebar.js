@@ -23,6 +23,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
 import HomeIcon from '@mui/icons-material/Home';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { useNavigate } from 'react-router-dom';
 
 const SidebarData = [
   {
@@ -79,7 +80,8 @@ const SidebarData = [
 ];
 
 const Sidebar = ({props, sidebarOpen}) => {
- 
+  const navigate = useNavigate();
+
   // const stylesClass = useStyles();
   const [isOpen, setIsOpen] = useState(true);
   const toggle = () => setIsOpen(!isOpen);
@@ -178,7 +180,7 @@ const Sidebar = ({props, sidebarOpen}) => {
                 if (item.id === 10) {
                   sessionStorage.setItem("logged", "")
                   sessionStorage.setItem("userid", "")
-                  window.location.href = "https://on-point-project.netlify.app/"
+                  navigate("/")
                 } else 
                 window.location.pathname = item.link;
               }}
