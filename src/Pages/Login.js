@@ -120,7 +120,7 @@ const Login = () => {
     //   sessionStorage.setItem("passwordData", "12345");
     // }
   };
-  const navigate = useNavigate();
+  
 
   return (
     <div className="container">
