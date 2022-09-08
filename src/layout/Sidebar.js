@@ -98,7 +98,7 @@ const Sidebar = ({props, sidebarOpen}) => {
         display: { md: "block", xs: "none" },
         background: "#000",
         color: "#fff",
-        height: "3000px",
+        height: "5000px",
         width: { width: isOpen ? "250px" : "80px" },
         transition: " all 0.5s",
       }}

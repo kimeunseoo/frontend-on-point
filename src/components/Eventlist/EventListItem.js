@@ -8,7 +8,7 @@ function EventListItem( data ) {
               <div class = "eventitem-date">{data.data.ondate}</div>
               <div class = "eventitem-from">{data.data.location}</div>
               <div class = "eventitem-text">{data.data.addressinfo}</div>
-              <div class = "eventitem-next">
+              <div class = "eventitem-navi">
                 <button class = "ok" onClick={(e) => {
                     window.location.href = `http://localhost:3000/search/${data.data.id}`;
                 }}>Show</button>

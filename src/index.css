@@ -191,7 +191,7 @@ code {
 {
   margin: 8px;
   width: 240px;
-  max-height: 220px;
+  max-height: 260px;
   padding: 10px;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -215,6 +215,8 @@ code {
   font-size: 12px;
   text-align: left;
   font-weight: bold;
+  height: 40px;
+  overflow: hidden;
 }
 
 .eventitem-box .eventitem-text
@@ -225,9 +227,26 @@ code {
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid rgb(190,180,175);
+  height: 80px;
+  overflow: hidden;
 }
 
 .eventitem-box .eventitem-next
+{
+  text-align: right;
+}
+
+.eventitem-box .eventitem-navi
+{
+  font-size: 14px;
+  text-align: left;
+  line-height: 22px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgb(190,180,175);
+}
+
+.eventitem-box .eventitem-navi
 {
   text-align: right;
 }
