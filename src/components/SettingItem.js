@@ -104,7 +104,7 @@ const SettingItem = () => {
   return (
     <>
       <Box>
-        <Typography variant="h4">SETTINGS</Typography>
+        <Typography variant="h6">SETTINGS</Typography>
       </Box>
       <Grid container columns={12}>
         <Grid item xs={12} sx={{ m: "0 auto", mt: 3 }}>
