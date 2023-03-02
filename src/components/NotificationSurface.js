@@ -39,7 +39,7 @@
     //       // *** //
     //       /*
     //       com(
-    //         `https://wbs-backend-finalproject.herokuapp.com/${uid}`,
+    //         `https://backend-on-point.onrender.com/${uid}`,
     //         function(json){
     //           fname.value = json[0].fname;
     //           sname.value = json[0].sname;
@@ -61,7 +61,7 @@
         {
             const uid = sessionStorage.getItem("userid");
             // *** //   
-            com( `https://wbs-backend-finalproject.herokuapp.com/notification/list/${uid}`, function(json) {
+            com( `https://backend-on-point.onrender.com/notification/list/${uid}`, function(json) {
                 let v = "";
                 // *** //
                 //alert(json);
@@ -108,7 +108,7 @@
                     document.getElementById(`tbl_btn_${element.id}`).addEventListener("click", function(e){
                         if ( window.confirm("Do you want to remove this Reminder?") )
                         {
-                            com( `https://wbs-backend-finalproject.herokuapp.com/notification/remove/entry/${e.target.name}`, function(o) {} );
+                            com( `https://backend-on-point.onrender.com/notification/remove/entry/${e.target.name}`, function(o) {} );
                             // *** //
                          
                             loadTable();
@@ -303,7 +303,7 @@
                         if ( ok )
                         {
                             com(
-                            `https://wbs-backend-finalproject.herokuapp.com/notification/save/${uid}/${ontype}/${ondaybox}/${onweekbox}/${onregionbox}/${ontitlebox}/${onmessagebox}`,
+                            `https://backend-on-point.onrender.com/notification/save/${uid}/${ontype}/${ondaybox}/${onweekbox}/${onregionbox}/${ontitlebox}/${onmessagebox}`,
                             function(e){}
                             );
                             // *** //
@@ -394,7 +394,7 @@
                         const uid = sessionStorage.getItem("userid");
                         // *** //
                         com(
-                        `https://wbs-backend-finalproject.herokuapp.com/notification/notify/set/${uid}/${onei}/${onms}/${onlo}`,
+                        `https://backend-on-point.onrender.com/notification/notify/set/${uid}/${onei}/${onms}/${onlo}`,
                         function(e){}
                         );
                     }}
@@ -406,7 +406,7 @@
                         const uid = sessionStorage.getItem("userid");
                         // *** //
                         com(
-                        `https://wbs-backend-finalproject.herokuapp.com/notification/notify/set/${uid}/1/1/1`,
+                        `https://backend-on-point.onrender.com/notification/notify/set/${uid}/1/1/1`,
                         function(e){}
                         );
                     }}

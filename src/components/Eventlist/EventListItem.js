@@ -20,8 +20,8 @@ function EventListItem( data ) {
                 <button class = "cancel" onClick={(e) => {
                     if ( window.confirm("Do you want to cancel and remove the event?") )
                     {
-                        console.log(`https://wbs-backend-finalproject.herokuapp.com/search/delete/${data.data.id}`);
-                        com(`https://wbs-backend-finalproject.herokuapp.com/search/delete/${data.data.id}`,function(e){});
+                        console.log(`https://backend-on-point.onrender.com/search/delete/${data.data.id}`);
+                        com(`https://backend-on-point.onrender.com/search/delete/${data.data.id}`,function(e){});
                         document.getElementById(`${data.data.id}`).style.display = "none";
                       
                     }

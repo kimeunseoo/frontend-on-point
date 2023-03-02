@@ -85,7 +85,7 @@ const MapItem = () => {
     if (mylat === null || mylat === "null") mylat = 0;
     if (mylong === null || mylong === "null") mylong = 0;
     // *** //
-    const query = `https://wbs-backend-finalproject.herokuapp.com/map/unique/${getPathKey(1)}`;
+    const query = `https://backend-on-point.onrender.com/map/unique/${getPathKey(1)}`;
     // *** //
     console.log(query);
     // *** //

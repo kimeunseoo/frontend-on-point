@@ -37,10 +37,10 @@ const SignUp = () => {
     const city = document.getElementById("city").value;
     const postnumber = document.getElementById("postnumber").value;
     const phone = document.getElementById("phone").value;
-    com( `https://wbs-backend-finalproject.herokuapp.com/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`, function(e){} );
+    com( `https://backend-on-point.onrender.com/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`, function(e){} );
    navigate("/")
-  /*await axios.post(`https://wbs-backend-finalproject.herokuapp.com/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`,{}
-    // https://wbs-backend-finalproject.herokuapp.com/register/FIRSTNAME/LASTNAME/EMAIL/PHONE/CITY/PCODE/STATUSINFO
+  /*await axios.post(`https://backend-on-point.onrender.com/register/${firstname}/${lastname}/${email}/${password}/${phone}/${city}/${postnumber}`,{}
+    // https://backend-on-point.onrender.com/register/FIRSTNAME/LASTNAME/EMAIL/PHONE/CITY/PCODE/STATUSINFO
     ).then((json)=>{
          if (json.length > 0) {
           sessionStorage.setItem("Register", 1);

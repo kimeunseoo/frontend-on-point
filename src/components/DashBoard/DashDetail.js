@@ -38,13 +38,13 @@ const DashDetail = () => {
   useEffect(() => {
     const eid = getPathKey(1);
     // *** //
-    console.log(`https://wbs-backend-finalproject.herokuapp.com/search/detail/${eid}`);
-    com(`https://wbs-backend-finalproject.herokuapp.com/search/detail/${eid}`,
+    console.log(`https://backend-on-point.onrender.com/search/detail/${eid}`);
+    com(`https://backend-on-point.onrender.com/search/detail/${eid}`,
       function (json) {
         let pic = json[0].foto1;
 
         if(pic != undefined && pic != null)
-            pic = "https://wbs-backend-finalproject.herokuapp.com" + pic.replace('./', '/');
+            pic = "https://backend-on-point.onrender.com" + pic.replace('./', '/');
         // *** //
         setReadIn([json[0].id, json[0].uid, 
                   json[0].category, json[0].description, 
@@ -55,7 +55,7 @@ const DashDetail = () => {
         console.log(readIn);
       });
     // *** //
-    com(`https://wbs-backend-finalproject.herokuapp.com/comment/get/${eid}`,
+    com(`https://backend-on-point.onrender.com/comment/get/${eid}`,
       function (json) {
         console.log(json);
         setComment(json);

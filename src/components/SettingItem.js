@@ -57,7 +57,7 @@ const SettingItem = () => {
     // *** //
     const uid = sessionStorage.getItem("userid");
     // *** //
-    com(`https://wbs-backend-finalproject.herokuapp.com/${uid}`, function (json) {
+    com(`https://backend-on-point.onrender.com/${uid}`, function (json) {
       /*fname.value = json[0].fname;
       sname.value = json[0].sname;
       email.value = json[0].email;
@@ -79,7 +79,7 @@ const SettingItem = () => {
     const mode = document.getElementById("dmode");
     const show = document.getElementById("showc");
     // *** //
-    com(`https://wbs-backend-finalproject.herokuapp.com/setup/loadgen/${uid}`, function (json) {
+    com(`https://backend-on-point.onrender.com/setup/loadgen/${uid}`, function (json) {
       if (json[0].langkey === "de") lang.innerHTML = "German";
       else lang.innerHTML = "English";
       // *** //
@@ -167,7 +167,7 @@ const SettingItem = () => {
                   src={
                     sessionStorage.getItem("userlogo")
                       ? sessionStorage.getItem("userlogo")
-                      : `https://wbs-backend-finalproject.herokuapp.com/public/none.png`
+                      : `https://backend-on-point.onrender.com/public/none.png`
                   }
                   style={{ height: "100px", margin: "1.5em" }}
                 />
@@ -177,105 +177,105 @@ const SettingItem = () => {
               </Grid>
               <Typography>&nbsp;&nbsp;&nbsp;&nbsp; Choose your Avatar: </Typography>
               <CardContent sx={{ display: "flex", flexWrap: "wrap" }}>
-                {/* <Avatar id = "avatar-icon-0" src = "https://wbs-backend-finalproject.herokuapp.com/public/boy.png"></Avatar>
-                  <Avatar id = "avatar-icon-1" src = "https://wbs-backend-finalproject.herokuapp.com/public/boy(1).png"></Avatar>
-                  <Avatar id = "avatar-icon-2" src = "https://wbs-backend-finalproject.herokuapp.com/public/boy(2).png"></Avatar>
-                  <Avatar id = "avatar-icon-3" src = "https://wbs-backend-finalproject.herokuapp.com/public/boy(3).png"></Avatar>
-                  <Avatar id = "avatar-icon-4" src = "https://wbs-backend-finalproject.herokuapp.com/public/boy(4).png"></Avatar>
-                  <Avatar id = "avatar-icon-5" src = "https://wbs-backend-finalproject.herokuapp.com/public/female.png"></Avatar>
-                  <Avatar id = "avatar-icon-6" src = "https://wbs-backend-finalproject.herokuapp.com/public/female(1).png"></Avatar>
-                  <Avatar id = "avatar-icon-7" src = "https://wbs-backend-finalproject.herokuapp.com/public/female(2).png"></Avatar>
-                  <Avatar id = "avatar-icon-8" src = "https://wbs-backend-finalproject.herokuapp.com/public/girl.png"></Avatar>
-                  <Avatar id = "avatar-icon-9" src = "https://wbs-backend-finalproject.herokuapp.com/public/girl(1).png"></Avatar>
-                  <Avatar id = "avatar-icon-10" src = "https://wbs-backend-finalproject.herokuapp.com/public/girl(2).png"></Avatar>
-                  <Avatar id = "avatar-icon-11" src = "https://wbs-backend-finalproject.herokuapp.com/public/girl(3).png"></Avatar>
-                  <Avatar id = "avatar-icon-12" src = "https://wbs-backend-finalproject.herokuapp.com/public/girl(4).png"></Avatar>
-                  <Avatar id = "avatar-icon-13" src = "https://wbs-backend-finalproject.herokuapp.com/public/girl(5).png"></Avatar>
-                  <Avatar id = "avatar-icon-14" src = "https://wbs-backend-finalproject.herokuapp.com/public/woman.png"></Avatar>
-                  <Avatar id = "avatar-icon-15" src = "https://wbs-backend-finalproject.herokuapp.com/public/woman(1).png"></Avatar>
-                  <Avatar id = "avatar-icon-16" src = "https://wbs-backend-finalproject.herokuapp.com/public/woman(2).png"></Avatar>
-                  <Avatar id = "avatar-icon-17" src = "https://wbs-backend-finalproject.herokuapp.com/public/man.png"></Avatar>
-                  <Avatar id = "avatar-icon-18" src = "https://wbs-backend-finalproject.herokuapp.com/public/man(1).png"></Avatar>
-                  <Avatar id = "avatar-icon-19" src = "https://wbs-backend-finalproject.herokuapp.com/public/man(2).png"></Avatar>
-                  <Avatar id = "avatar-icon-20" src = "https://wbs-backend-finalproject.herokuapp.com/public/man(3).png"></Avatar>
-                  <Avatar id = "avatar-icon-21" src = "https://wbs-backend-finalproject.herokuapp.com/public/man(4).png"></Avatar>
-                  <Avatar id = "avatar-icon-22" src = "https://wbs-backend-finalproject.herokuapp.com/public/man(9).png"></Avatar>
-                  <Avatar id = "avatar-icon-23" src = "https://wbs-backend-finalproject.herokuapp.com/public/male.png"></Avatar>
-                  <Avatar id = "avatar-icon-24" src = "https://wbs-backend-finalproject.herokuapp.com/public/glasses.png"></Avatar>
-                  <Avatar id = "avatar-icon-25" src = "https://wbs-backend-finalproject.herokuapp.com/public/grandfather.png"></Avatar>
-                  <Avatar id = "avatar-icon-26" src = "https://wbs-backend-finalproject.herokuapp.com/public/grandmother.png"></Avatar> */}
+                {/* <Avatar id = "avatar-icon-0" src = "https://backend-on-point.onrender.com/public/boy.png"></Avatar>
+                  <Avatar id = "avatar-icon-1" src = "https://backend-on-point.onrender.com/public/boy(1).png"></Avatar>
+                  <Avatar id = "avatar-icon-2" src = "https://backend-on-point.onrender.com/public/boy(2).png"></Avatar>
+                  <Avatar id = "avatar-icon-3" src = "https://backend-on-point.onrender.com/public/boy(3).png"></Avatar>
+                  <Avatar id = "avatar-icon-4" src = "https://backend-on-point.onrender.com/public/boy(4).png"></Avatar>
+                  <Avatar id = "avatar-icon-5" src = "https://backend-on-point.onrender.com/public/female.png"></Avatar>
+                  <Avatar id = "avatar-icon-6" src = "https://backend-on-point.onrender.com/public/female(1).png"></Avatar>
+                  <Avatar id = "avatar-icon-7" src = "https://backend-on-point.onrender.com/public/female(2).png"></Avatar>
+                  <Avatar id = "avatar-icon-8" src = "https://backend-on-point.onrender.com/public/girl.png"></Avatar>
+                  <Avatar id = "avatar-icon-9" src = "https://backend-on-point.onrender.com/public/girl(1).png"></Avatar>
+                  <Avatar id = "avatar-icon-10" src = "https://backend-on-point.onrender.com/public/girl(2).png"></Avatar>
+                  <Avatar id = "avatar-icon-11" src = "https://backend-on-point.onrender.com/public/girl(3).png"></Avatar>
+                  <Avatar id = "avatar-icon-12" src = "https://backend-on-point.onrender.com/public/girl(4).png"></Avatar>
+                  <Avatar id = "avatar-icon-13" src = "https://backend-on-point.onrender.com/public/girl(5).png"></Avatar>
+                  <Avatar id = "avatar-icon-14" src = "https://backend-on-point.onrender.com/public/woman.png"></Avatar>
+                  <Avatar id = "avatar-icon-15" src = "https://backend-on-point.onrender.com/public/woman(1).png"></Avatar>
+                  <Avatar id = "avatar-icon-16" src = "https://backend-on-point.onrender.com/public/woman(2).png"></Avatar>
+                  <Avatar id = "avatar-icon-17" src = "https://backend-on-point.onrender.com/public/man.png"></Avatar>
+                  <Avatar id = "avatar-icon-18" src = "https://backend-on-point.onrender.com/public/man(1).png"></Avatar>
+                  <Avatar id = "avatar-icon-19" src = "https://backend-on-point.onrender.com/public/man(2).png"></Avatar>
+                  <Avatar id = "avatar-icon-20" src = "https://backend-on-point.onrender.com/public/man(3).png"></Avatar>
+                  <Avatar id = "avatar-icon-21" src = "https://backend-on-point.onrender.com/public/man(4).png"></Avatar>
+                  <Avatar id = "avatar-icon-22" src = "https://backend-on-point.onrender.com/public/man(9).png"></Avatar>
+                  <Avatar id = "avatar-icon-23" src = "https://backend-on-point.onrender.com/public/male.png"></Avatar>
+                  <Avatar id = "avatar-icon-24" src = "https://backend-on-point.onrender.com/public/glasses.png"></Avatar>
+                  <Avatar id = "avatar-icon-25" src = "https://backend-on-point.onrender.com/public/grandfather.png"></Avatar>
+                  <Avatar id = "avatar-icon-26" src = "https://backend-on-point.onrender.com/public/grandmother.png"></Avatar> */}
 
                 <Avatar
                   id="avatar-icon-0"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/anonymous.png"
+                  src="https://backend-on-point.onrender.com/public/anonymous.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-1"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/boy1.png"
+                  src="https://backend-on-point.onrender.com/public/boy1.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-2"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/boy2.png"
+                  src="https://backend-on-point.onrender.com/public/boy2.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-3"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/boy3.png"
+                  src="https://backend-on-point.onrender.com/public/boy3.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-4"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/dertestboy.png"
+                  src="https://backend-on-point.onrender.com/public/dertestboy.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-5"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/girl1.png"
+                  src="https://backend-on-point.onrender.com/public/girl1.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-6"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/girl2.png"
+                  src="https://backend-on-point.onrender.com/public/girl2.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-7"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/girl3.png"
+                  src="https://backend-on-point.onrender.com/public/girl3.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-8"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/girl4.png"
+                  src="https://backend-on-point.onrender.com/public/girl4.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-9"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/man1.png"
+                  src="https://backend-on-point.onrender.com/public/man1.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-10"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/man2.png"
+                  src="https://backend-on-point.onrender.com/public/man2.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-11"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/man3.png"
+                  src="https://backend-on-point.onrender.com/public/man3.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-12"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/man4.png"
+                  src="https://backend-on-point.onrender.com/public/man4.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-13"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/woman1.png"
+                  src="https://backend-on-point.onrender.com/public/woman1.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-14"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/woman2.png"
+                  src="https://backend-on-point.onrender.com/public/woman2.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-15"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/woman3.png"
+                  src="https://backend-on-point.onrender.com/public/woman3.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-16"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/woman4.png"
+                  src="https://backend-on-point.onrender.com/public/woman4.png"
                 ></Avatar>
                 <Avatar
                   id="avatar-icon-17"
-                  src="https://wbs-backend-finalproject.herokuapp.com/public/woman5.png"
+                  src="https://backend-on-point.onrender.com/public/woman5.png"
                 ></Avatar>
               </CardContent>
 
@@ -360,10 +360,10 @@ const SettingItem = () => {
 
                     const uid = sessionStorage.getItem("userid");
                     console.log(
-                      `https://wbs-backend-finalproject.herokuapp.com/setup/user/${uid}/${fname}/${sname}/${email}/${phone}/${city}/${pcode}/${desc}/${avatar}`
+                      `https://backend-on-point.onrender.com/setup/user/${uid}/${fname}/${sname}/${email}/${phone}/${city}/${pcode}/${desc}/${avatar}`
                     );
                     com(
-                      `https://wbs-backend-finalproject.herokuapp.com/setup/user/${uid}/${fname}/${sname}/${email}/${phone}/${city}/${pcode}/${desc}/${avatar}`,
+                      `https://backend-on-point.onrender.com/setup/user/${uid}/${fname}/${sname}/${email}/${phone}/${city}/${pcode}/${desc}/${avatar}`,
                       function (e) {}
                     );
                   }}
@@ -461,7 +461,7 @@ const SettingItem = () => {
                   const uid = sessionStorage.getItem("userid");
 
                   com(
-                    `https://wbs-backend-finalproject.herokuapp.com/setup/general/${uid}/${mode}/${lang}/${show}/0/0/0`,
+                    `https://backend-on-point.onrender.com/setup/general/${uid}/${mode}/${lang}/${show}/0/0/0`,
                     function (e) {}
                   );
                 }}
@@ -476,7 +476,7 @@ const SettingItem = () => {
                   const uid = sessionStorage.getItem("userid");
 
                   com(
-                    `https://wbs-backend-finalproject.herokuapp.com/setup/general/${uid}/false/en/false/0/0/0`,
+                    `https://backend-on-point.onrender.com/setup/general/${uid}/false/en/false/0/0/0`,
                     function (e) {}
                   );
                 }}

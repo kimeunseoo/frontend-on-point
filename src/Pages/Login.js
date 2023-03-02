@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 //   const [informationlist, setInformationList]=useState([]);
 
 //   const addInformation = () => {
-//     Axios.post("https://wbs-backend-finalproject.herokuapp.com/login", {
+//     Axios.post("https://backend-on-point.onrender.com/login", {
 //       name: name,
 //       age: age,
 //       city: city,
@@ -36,7 +36,7 @@ const Login = () => {
   const [password, setPassword] = useState(0);
 
   // const addInformation = () => {
-  //     Axios.post("https://wbs-backend-finalproject.herokuapp.com/login", {
+  //     Axios.post("https://backend-on-point.onrender.com/login", {
   //       name: name,
   //       age: age,
   //       city: city,
@@ -57,13 +57,13 @@ const Login = () => {
   //   }),
   // };
   // const LoginGet = () =>{
-  //   Axios.get('https://wbs-backend-finalproject.herokuapp.com/login/mail/pass', function(json){
+  //   Axios.get('https://backend-on-point.onrender.com/login/mail/pass', function(json){
   //     if(json.length > 0)
 
   //   })
   // }
   // const getFetchLogin = () => {
-  //    fetch('https://wbs-backend-finalproject.herokuapp.com/login/mail/pass', function(json){
+  //    fetch('https://backend-on-point.onrender.com/login/mail/pass', function(json){
   //     if(json.length > 0 ){
   //       console.log(json)
   //       sessionStorage.setItem("logged", 1)
@@ -80,8 +80,8 @@ const Login = () => {
     e.preventDefault();
     const email = document.getElementById("email");
     const password = document.getElementById("pass");
-    console.log(`https://wbs-backend-finalproject.herokuapp.com/login/${email.value}/${password.value}`)
-    fetch(`https://wbs-backend-finalproject.herokuapp.com/login/${email.value}/${password.value}`)
+    console.log(`https://backend-on-point.onrender.com/login/${email.value}/${password.value}`)
+    fetch(`https://backend-on-point.onrender.com/login/${email.value}/${password.value}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error: ${res.status}`);
@@ -106,7 +106,7 @@ const Login = () => {
 
       });
 
-    // fetch('https://wbs-backend-finalproject.herokuapp.com/login/mail/pass', function(json){
+    // fetch('https://backend-on-point.onrender.com/login/mail/pass', function(json){
     //   if(json.length > 0 ){
     //     console.log(json)
     //     sessionStorage.setItem("logged", 1)

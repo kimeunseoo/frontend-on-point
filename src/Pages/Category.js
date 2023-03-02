@@ -57,7 +57,7 @@ function Category () {
         // *** //
         const cid = getPathKey(1);
         // *** //
-        const query = 'https://wbs-backend-finalproject.herokuapp.com/search/category/' + cid;
+        const query = 'https://backend-on-point.onrender.com/search/category/' + cid;
         // *** //
         const target = document.getElementById("contentmap");
         // *** //
@@ -73,7 +73,7 @@ function Category () {
             let cards = []; let entry = "";
             // *** //
             for (let element of json) {
-              entry = 'https://wbs-backend-finalproject.herokuapp.com' + element.foto1.replace( './', '/');
+              entry = 'https://backend-on-point.onrender.com' + element.foto1.replace( './', '/');
               // *** //
               cards.push({
                 id : element.id,

@@ -107,10 +107,10 @@ export default function SearchBar() {
     sessionStorage.setItem("search.category", category);
     sessionStorage.setItem("search.date", spdate);
     // *** //
-//    console.log(`https://wbs-backend-finalproject.herokuapp.com/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`);
+//    console.log(`https://backend-on-point.onrender.com/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`);
     navigate("/search")
 //alert( keyword + ", " + mylat + ", " + mylong + ", " + distance + ", " + category + ", " + spdate );
-    /*com( `https://wbs-backend-finalproject.herokuapp.com/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`,
+    /*com( `https://backend-on-point.onrender.com/search/result/${keyword}/${mylat}/${mylong}/${distance}/${category}/${spdate}`,
          function (e) {
           alert(e);
          } );*/

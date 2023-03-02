@@ -90,7 +90,7 @@ const handleAdd = () => {
         ])
       }
   
-      let formTarget = `https://wbs-backend-finalproject.herokuapp.com/event/create/${uid}`;
+      let formTarget = `https://backend-on-point.onrender.com/event/create/${uid}`;
 
       const CategorySearch = [
         { title: "General", year: 1957 },

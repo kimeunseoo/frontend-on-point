@@ -18,7 +18,7 @@ const MyEvent = () => {
     () => {
       const uid = sessionStorage.getItem("userid");
       // *** //
-      com(`https://wbs-backend-finalproject.herokuapp.com/event/readin/${uid}`, 
+      com(`https://backend-on-point.onrender.com/event/readin/${uid}`, 
       function(json) {
         const cal = [];
         // *** //
@@ -41,7 +41,7 @@ const MyEvent = () => {
         setReadIn(json);
       });
       // *** //
-      com(`https://wbs-backend-finalproject.herokuapp.com/event/joined/${uid}`, 
+      com(`https://backend-on-point.onrender.com/event/joined/${uid}`, 
       function(json) {
         //console.log("join->");
         //onsole.log(uid);

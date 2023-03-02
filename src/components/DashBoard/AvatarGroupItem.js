@@ -34,13 +34,13 @@ function AvatarGroupItem( data ) {
 
   useEffect(
     () => {
-      com(`https://wbs-backend-finalproject.herokuapp.com/event/origin/${getPathKey(1)}`, function(json) {
+      com(`https://backend-on-point.onrender.com/event/origin/${getPathKey(1)}`, function(json) {
         let nam = json[0].fname + " " + json[0].sname;
         // *** //
         setUserData( { logo : json[0].logo, name : nam } );
       });
       // *** //
-      com(`https://wbs-backend-finalproject.herokuapp.com/event/joinedFriends/${getPathKey(1)}`, function(json) {
+      com(`https://backend-on-point.onrender.com/event/joinedFriends/${getPathKey(1)}`, function(json) {
         console.log(">>>>>");
         let arr = [];
         // *** //
@@ -62,14 +62,14 @@ function AvatarGroupItem( data ) {
   function joinEvent ( eid, uid, text, info )
   {
       const myuid = sessionStorage.getItem("userid");
-      com(`https://wbs-backend-finalproject.herokuapp.com/search/join/${eid}/${myuid}/${text}/${info}`, function(e){});
+      com(`https://backend-on-point.onrender.com/search/join/${eid}/${myuid}/${text}/${info}`, function(e){});
       alert("You have joined that event");
   }
 
   function disJoinEvent ( eid, uid )
   {
     const myuid = sessionStorage.getItem("userid");
-    com(`https://wbs-backend-finalproject.herokuapp.com/search/disjoin/${eid}/${myuid}`, function(e){});
+    com(`https://backend-on-point.onrender.com/search/disjoin/${eid}/${myuid}`, function(e){});
     alert("You have disjoined that event");
   }
 

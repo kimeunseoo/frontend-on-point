@@ -21,8 +21,8 @@ function EventListItem2( data ) {
                     if ( window.confirm("Do you want to cancel and remove the event?") )
                     {
                         const uid = sessionStorage.getItem("userid");
-//console.log(`https://wbs-backend-finalproject.herokuapp.com/search/disjoin/${data.data.eid}/${uid}`);
-                        com(`https://wbs-backend-finalproject.herokuapp.com/search/disjoin/${data.data.eid}/${uid}`,function(e){});
+//console.log(`https://backend-on-point.onrender.com/search/disjoin/${data.data.eid}/${uid}`);
+                        com(`https://backend-on-point.onrender.com/search/disjoin/${data.data.eid}/${uid}`,function(e){});
                         document.getElementById(`${data.data.id}`).style.display = "none";
                     }
                 }}>Remove</button>
